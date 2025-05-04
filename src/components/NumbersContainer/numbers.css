@@ -1,25 +1,27 @@
 /* External container of the data */
 #data-container{
   position: absolute;
-  top: 0;
+  top: 10vh;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   overflow: auto;
   scrollbar-width: none;
 }
 /* Internal container of the data (bigger than the screen size) */
 #data{
   position: absolute;
+  display: grid;
   /* TODO: check unit based on screen window */
   width: 130vw;
   height: 130vh;
+  padding: 10px;
 }
 
 /* TODO: understand why on the right there is more space than on the right */
 
 .numbers {
-  position: absolute;
+  /* position: absolute; */
   font-size: 1.5rem;
 }
 

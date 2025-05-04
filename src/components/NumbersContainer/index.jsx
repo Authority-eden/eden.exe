@@ -22,6 +22,7 @@ export default function NumbersContainer({ cells = 600, specialCount = 3 }) {
     <EnigmaNumber key={index} isSpecial={specialIndices.has(index)} />
   ));
 
+
   return (
     <div id="data-container">
       <div 

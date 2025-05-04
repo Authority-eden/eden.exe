@@ -3,7 +3,8 @@ import "./enigmaNumber.css"
 export default function EnigmaNumber({ isSpecial }) {
   function OpenPage() {
     if (isSpecial){
-      window.open("/Riddle", "_blank", "width=900, height=600, titlebar=no");
+      // TODO: make position relative
+      window.open("/Riddle", "_blank", "width=900, height=600, top=100, left=300");
     }
   }
 

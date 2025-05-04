@@ -1,0 +1,12 @@
+.selection-box {
+  position: absolute;
+  border: 1px dashed #007bff;
+  background-color: rgba(97, 102, 127, 0.541);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+body.dragging {
+  user-select: none;
+  cursor: crosshair;
+}

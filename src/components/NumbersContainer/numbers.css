@@ -21,8 +21,9 @@
 /* TODO: understand why on the right there is more space than on the right */
 
 .numbers {
-  /* position: absolute; */
   font-size: 1.5rem;
+  justify-self: center;
+  align-self: center;
 }
 
 .noselect {

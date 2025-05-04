@@ -1,0 +1,47 @@
+/* External container of the data */
+#data-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
+}
+/* Internal container of the data (bigger than the screen size) */
+#data{
+  position: absolute;
+  /* TODO: check unit based on screen window */
+  width: 130vw;
+  height: 130vh;
+}
+
+/* TODO: understand why on the right there is more space than on the right */
+
+.numbers {
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+body.dragging {
+  user-select: none;
+}
+.selection-box {
+  position: absolute;
+  border: 1px dashed #000;
+  background: rgba(255, 248, 248, 0.6);
+  pointer-events: none;
+  z-index: 9999;
+}

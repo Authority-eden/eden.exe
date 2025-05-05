@@ -1,6 +1,10 @@
+/* Sequence of numbers needed for agent work */
+.numbers.sequence{
+  color: chartreuse;
+}
 /* Glitched number to open riddle */
 /* TODO: improve animation and style */
-.special-number {
+.numbers.special-number {
   color: red;
   font-weight: bold;
   animation: pulse 1.5s infinite;
@@ -11,6 +15,7 @@
   50%  { transform: scale(1.2); opacity: 0.7; }
   100% { transform: scale(1); opacity: 1; }
 }
-.special-number:visited {
-  color: green;
+/* TODO: hide/lower opacity the number after visiting */
+.visited-special-number {
+  opacity: 0.2;
 }

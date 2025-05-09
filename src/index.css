@@ -4,10 +4,10 @@
   padding: 0;
 }
 
-body{
+body {
   overscroll-behavior: none;
-  background-color: black;
-  color: #74B9FF;
+  background-color: rgb(21, 21, 21);
+  color: #74b9ff;
   font-family: monospace;
   text-align: center;
   user-select: none;
@@ -23,13 +23,11 @@ body.zoom-in {
 
 /* Animation on body before leaving the page */
 /* TODO: improve zoom-out animation */
- body.zoom-out {
+body.zoom-out {
   transition: transform 0.5s ease, opacity 0.5s ease;
   transform: scale(0.95);
   opacity: 0;
 }
-
-
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

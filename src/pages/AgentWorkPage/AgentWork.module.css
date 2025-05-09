@@ -1,0 +1,26 @@
+header,
+footer {
+  background-color: rgb(21, 21, 21);
+  border: 1px solid #74b9ff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  z-index: 1;
+}
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer div {
+  margin: auto;
+}
+.pop-up-riddle {
+  background-color: goldenrod;
+  width: 30vw;
+  height: 20vh;
+}

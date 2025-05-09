@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./selectionBox.css";
 
-export default function SelectionBoxOverlay({
-  targetSequences = [[3, 1, 4, 1]],
-}) {
+export default function SelectionBoxOverlay({ targetSequences }) {
   const [boxStyle, setBoxStyle] = useState(null);
   const startPos = useRef({ x: 0, y: 0 });
   const selectionRef = useRef(null);
@@ -80,21 +78,6 @@ export default function SelectionBoxOverlay({
         sorted.forEach(({ el }) => (el.style.visibility = "hidden"));
       }
 
-      /*  const padding = 1;
-
-      // Hide the selected numbers
-      numbers.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (
-          rect.left >= boxRect.left + padding &&
-          rect.right <= boxRect.right - padding &&
-          rect.top >= boxRect.top + padding &&
-          rect.bottom <= boxRect.bottom - padding
-        ) {
-          el.style.visibility = "hidden";
-        }
-      }); */
-
       // After hiding the numbers, set the box style to null to hide it
       setBoxStyle(null);
       document.body.classList.remove("dragging");
@@ -108,7 +91,7 @@ export default function SelectionBoxOverlay({
     return () => {
       window.removeEventListener("mousedown", onMouseDown);
     };
-  }, []);
+  }, [targetSequences]);
 
   return (
     <>

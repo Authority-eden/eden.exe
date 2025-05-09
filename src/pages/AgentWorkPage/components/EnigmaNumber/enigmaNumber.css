@@ -1,0 +1,54 @@
+/* Sequence of numbers needed for agent work */
+.numbers.sequence {
+  color: chartreuse;
+  animation: wiggle 1s infinite;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(10deg);
+    opacity: 0.7;
+  }
+  95% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Glitched number to open riddle */
+/* TODO: improve animation and style */
+.numbers.special-number {
+  color: red;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* TODO: hide/lower opacity the number after visiting */
+.visited-special-number {
+  opacity: 0.2;
+  cursor: pointer;
+}

@@ -5,7 +5,7 @@ import "./numbers.css";
 export default function NumbersContainer({
   cells = 600,
   specialCount = 3,
-  targetSequences = [[3, 1, 4, 1]],
+  targetSequences,
 }) {
   // Offset to centre the div that is bigger than the screen
   useEffect(() => {
@@ -56,8 +56,8 @@ export default function NumbersContainer({
   const numbers = numbersArray.map((num, idx) => (
     <EnigmaNumber
       key={idx}
-      id={idx} //
-      number={num} //
+      id={idx}
+      number={num} // This is the actual value from numbersArray
       isSpecial={specialIndices.has(idx)}
       isPartOfSequence={usedIndices.has(idx)}
     />

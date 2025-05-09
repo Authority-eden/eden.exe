@@ -26,8 +26,8 @@ export default function EnigmaNumber({
         "_blank",
         "width=900, height=600, top=100, left=300"
       );
+      setClassName("numbers visited-special-number");
     }
-    setClassName("numbers visited-special-number");
   }
 
   return (
@@ -37,7 +37,7 @@ export default function EnigmaNumber({
       data-number={number}
       data-id={id}
     >
-      {Math.floor(Math.random() * 10)}
+      {number}
     </div>
   );
 }

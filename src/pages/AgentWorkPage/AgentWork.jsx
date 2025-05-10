@@ -1,5 +1,6 @@
 import { STATES, useStateMachine } from "../../stateMachine";
 import React from "react";
+import { useState } from "react";
 import Modal from "react-modal";
 import NumbersContainer from "./components/NumbersContainer";
 import SelectionBoxOverlay from "./components/SelectionBoxOverlay";
@@ -9,11 +10,15 @@ const targetSequences = [
   [3, 1, 4, 1, 3, 1],
   [2, 7, 1, 8, 1, 8],
   [0, 5, 0, 5, 0, 5],
+  [3, 1, 4, 1, 3, 1],
+  [2, 7, 1, 8, 1, 8],
+  [0, 5, 0, 5, 0, 5],
 ];
 
 export default function AgentWork() {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [sequences, setSequences] = React.useState(targetSequences);
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [sequences, setSequences] = useState(targetSequences);
+  const [deletedCount, setDeletedCount] = useState(0);
   const { changeState } = useStateMachine();
 
   function openModal() {
@@ -23,17 +28,25 @@ export default function AgentWork() {
     setIsOpen(false);
   }
 
+  function incrementDeletedCount() {
+    setDeletedCount((prev) => prev + 1);
+  }
+
   return (
     <>
       <header className="eden-header">
         <h1>EDEN.EXE</h1>
       </header>
 
-      <SelectionBoxOverlay
+      {/* <SelectionBoxOverlay
         targetSequences={sequences}
         setSequences={setSequences}
+        onSequenceDelete={incrementDeletedCount}
+      /> */}
+      <NumbersContainer
+        targetSequences={targetSequences}
+        onSequenceDelete={incrementDeletedCount}
       />
-      <NumbersContainer targetSequences={targetSequences} />
 
       <Modal
         isOpen={modalIsOpen}
@@ -43,9 +56,7 @@ export default function AgentWork() {
       />
 
       <footer id="eden-footer">
-        <div>{sequences[0]}</div>
-        <div>{sequences[1]}</div>
-        <div>{sequences[2]}</div>
+        <progress value={deletedCount / targetSequences.length} />
       </footer>
     </>
   );

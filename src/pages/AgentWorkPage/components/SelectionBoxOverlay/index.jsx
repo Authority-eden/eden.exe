@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "./selectionBox.css";
 
-export default function SelectionBoxOverlay({ targetSequences }) {
+export default function SelectionBoxOverlay({
+  targetSequences,
+  onSequenceDelete,
+}) {
   const [boxStyle, setBoxStyle] = useState(null);
   const startPos = useRef({ x: 0, y: 0 });
   const selectionRef = useRef(null);
@@ -10,12 +13,17 @@ export default function SelectionBoxOverlay({ targetSequences }) {
     // When you click start tracking the position of the cursor (box size still 0)
     function onMouseDown(e) {
       if (e.button !== 0) return; // Left-click only
+      const container = document.getElementById("data-container");
+      const containerRect = container.getBoundingClientRect();
+
+      const startX = e.clientX - containerRect.left + container.scrollLeft;
+      const startY = e.clientY - containerRect.top + container.scrollTop;
 
       // Check cursor position
-      startPos.current = { x: e.pageX, y: e.pageY };
+      startPos.current = { x: startX, y: startY };
       setBoxStyle({
-        left: e.pageX,
-        top: e.pageY,
+        left: startX,
+        top: startY,
         width: 0,
         height: 0,
       });
@@ -29,16 +37,22 @@ export default function SelectionBoxOverlay({ targetSequences }) {
 
     // Track box dimensions while you move with the mouse down
     function onMouseMove(e) {
-      const x = Math.min(e.pageX, startPos.current.x);
-      const y = Math.min(e.pageY, startPos.current.y);
-      const width = Math.abs(e.pageX - startPos.current.x);
-      const height = Math.abs(e.pageY - startPos.current.y);
+      const container = document.getElementById("data-container");
+      const containerRect = container.getBoundingClientRect();
+
+      const currentX = e.clientX - containerRect.left + container.scrollLeft;
+      const currentY = e.clientY - containerRect.top + container.scrollTop;
+
+      const x = Math.min(currentX, startPos.current.x);
+      const y = Math.min(currentY, startPos.current.y);
+      const width = Math.abs(currentX - startPos.current.x);
+      const height = Math.abs(currentY - startPos.current.y);
 
       setBoxStyle({ left: x, top: y, width, height });
     }
 
     // When you unclick
-    function onMouseUp() {
+    function onMouseUp(e) {
       // If no selection, just return
       if (!selectionRef.current) return;
 
@@ -75,6 +89,7 @@ export default function SelectionBoxOverlay({ targetSequences }) {
       );
       // If they match, then hide them
       if (matches) {
+        onSequenceDelete();
         sorted.forEach(({ el }) => (el.style.visibility = "hidden"));
       }
 
@@ -91,7 +106,7 @@ export default function SelectionBoxOverlay({ targetSequences }) {
     return () => {
       window.removeEventListener("mousedown", onMouseDown);
     };
-  }, [targetSequences]);
+  }, [targetSequences, onSequenceDelete]);
 
   return (
     <>

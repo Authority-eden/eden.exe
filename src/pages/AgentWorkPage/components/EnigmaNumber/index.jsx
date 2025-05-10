@@ -4,7 +4,7 @@ import "./enigmaNumber.css";
 export default function EnigmaNumber({
   isSpecial,
   isPartOfSequence,
-  number,
+  value,
   id,
 }) {
   // Define the possible classes that the numbers can be part of
@@ -34,10 +34,10 @@ export default function EnigmaNumber({
     <div
       className={className}
       onClick={OpenPage}
-      data-number={number}
+      data-number={value}
       data-id={id}
     >
-      {number}
+      {value}
     </div>
   );
 }

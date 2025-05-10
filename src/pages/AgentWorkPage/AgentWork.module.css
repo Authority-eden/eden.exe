@@ -14,7 +14,8 @@ header {
 footer {
   bottom: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 footer div {
   margin: auto;

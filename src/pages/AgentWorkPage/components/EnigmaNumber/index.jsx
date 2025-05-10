@@ -1,13 +1,12 @@
 import { useState } from "react";
 import "./enigmaNumber.css";
 
-const riddlePages = ["color_coded", "cut_throat"];
-
 export default function EnigmaNumber({
   isSpecial,
   isPartOfSequence,
   value,
   id,
+  riddlePage,
 }) {
   // Define the possible classes that the numbers can be part of
   const classes = [
@@ -22,12 +21,16 @@ export default function EnigmaNumber({
 
   function OpenPage() {
     if (isSpecial) {
-      // TODO: make position relative
-      window.open(
-        `/${riddlePages[n]}`,
-        "_blank",
-        "width=900, height=600, top=100, left=300"
-      );
+      const page = riddlePage;
+      if (page) {
+        window.open(
+          `/${page}`,
+          "_blank",
+          "width=900, height=600, top=100, left=300"
+        );
+      } else {
+        alert("No riddle assigned to this number.");
+      }
       setClassName("numbers visited-special-number");
     }
   }

@@ -3,6 +3,8 @@ import EnigmaNumber from "../EnigmaNumber";
 import SelectionBoxOverlay from "../SelectionBoxOverlay";
 import "./numbers.css";
 
+const riddleNames = ["color_coded", "cut_throat"];
+
 export default function NumbersContainer({
   cells = 600,
   row = 20,
@@ -42,6 +44,7 @@ export default function NumbersContainer({
             value={item.value}
             isSpecial={item.isSpecial}
             isPartOfSequence={item.isSequence}
+            riddlePage={item.riddlePage}
           />
         ))}
       </div>
@@ -60,33 +63,27 @@ function generateTemplateColumnOption(value) {
   return `repeat(${value}, 1fr)`;
 }
 
+// Generate the grid of number with injected sequences and special numbers leading to a different page each
 function generateGrid(cells, columns, specialCount, targetSequences) {
-  // Array of the numbers for the grid
   const numbersArray = new Array(cells)
     .fill(null)
     .map(() => Math.floor(Math.random() * 10));
-  // Track sequence positions
+
   const sequenceIndices = new Set();
   const insertedSequences = [];
 
-  // Inject each sequence at a unique random position without overlap and
+  // Insert sequences
   targetSequences.forEach((seq) => {
     let inserted = false;
     while (!inserted) {
       const pos = Math.floor(Math.random() * (cells - seq.length));
-
-      // Calculate row and column
       const row = Math.floor(pos / columns);
       const col = pos % columns;
-
-      // Ensure it fits in the current row
       if (col + seq.length > columns) continue;
 
-      // Ensure no overlap
       const overlap = seq.some((_, i) => sequenceIndices.has(pos + i));
       if (overlap) continue;
 
-      // Insert
       seq.forEach((num, i) => {
         numbersArray[pos + i] = num;
         sequenceIndices.add(pos + i);
@@ -97,25 +94,46 @@ function generateGrid(cells, columns, specialCount, targetSequences) {
     }
   });
 
-  // Generate specialIndices that do not overlap with sequenceIndices
-  const specialIndices = new Set();
-  while (
-    specialIndices.size < Math.min(specialCount, cells - sequenceIndices.size)
-  ) {
-    const idx = Math.floor(Math.random() * cells);
-    if (!sequenceIndices.has(idx)) {
-      specialIndices.add(idx);
-      sequenceIndices.add(idx); // Optionally reserve it
-    }
+  // Riddles list – must match specialCount length
+  const riddleNames = ["color_coded", "cut_throat"]; // Add more if needed
+  if (riddleNames.length !== specialCount) {
+    throw new Error("Riddle count must match specialCount.");
   }
 
-  // Create the grid
-  const numbers = numbersArray.map((num, idx) => ({
-    id: idx,
-    value: num,
-    isSpecial: specialIndices.has(idx),
-    isSequence: sequenceIndices.has(idx),
+  // Generate special cells with exact 1:1 mapping to riddles
+  const availableIndices = [...Array(cells).keys()].filter(
+    (i) => !sequenceIndices.has(i)
+  );
+
+  const shuffledIndices = shuffleArray(availableIndices).slice(0, specialCount);
+  const specialCells = shuffledIndices.map((idx, i) => ({
+    idx,
+    riddle: riddleNames[i],
   }));
 
+  const specialIndexSet = new Set(specialCells.map((item) => item.idx));
+
+  // Final grid
+  const numbers = numbersArray.map((num, idx) => {
+    const special = specialCells.find((item) => item.idx === idx);
+    return {
+      id: idx,
+      value: num,
+      isSpecial: !!special,
+      isSequence: sequenceIndices.has(idx),
+      riddlePage: special?.riddle || null, // will never be null
+    };
+  });
+
   return numbers;
+}
+
+// Fisher-Yates shuffle
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }

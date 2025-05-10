@@ -1,6 +1,6 @@
 import "./riddle.module.css";
 
-export default function Riddle() {
+export default function CutThroat() {
   function CloseTab() {
     window.close();
   }

@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./enigmaNumber.css";
+
+const riddlePages = ["color_coded", "cut_throat"];
 
 export default function EnigmaNumber({
   isSpecial,
@@ -22,7 +24,7 @@ export default function EnigmaNumber({
     if (isSpecial) {
       // TODO: make position relative
       window.open(
-        "/riddle",
+        `/${riddlePages[n]}`,
         "_blank",
         "width=900, height=600, top=100, left=300"
       );

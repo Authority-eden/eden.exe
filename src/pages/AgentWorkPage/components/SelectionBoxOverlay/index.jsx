@@ -4,6 +4,7 @@ import "./selectionBox.css";
 export default function SelectionBoxOverlay({
   targetSequences,
   onSequenceDelete,
+  suppressSelectionBox,
 }) {
   const [boxStyle, setBoxStyle] = useState(null);
   const startPos = useRef({ x: 0, y: 0 });
@@ -12,7 +13,7 @@ export default function SelectionBoxOverlay({
   useEffect(() => {
     // When you click start tracking the position of the cursor (box size still 0)
     function onMouseDown(e) {
-      if (e.button !== 0) return; // Left-click only
+      if (e.button !== 0 || suppressSelectionBox) return; // Left-click only
       const container = document.getElementById("data-container");
       const containerRect = container.getBoundingClientRect();
 
@@ -106,7 +107,7 @@ export default function SelectionBoxOverlay({
     return () => {
       window.removeEventListener("mousedown", onMouseDown);
     };
-  }, [targetSequences, onSequenceDelete]);
+  }, [targetSequences, onSequenceDelete, suppressSelectionBox]);
 
   return (
     <>

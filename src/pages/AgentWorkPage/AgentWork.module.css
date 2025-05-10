@@ -20,13 +20,27 @@ footer {
 footer div {
   margin: auto;
 }
-.pop-up-message {
-  background-color: rgb(181, 32, 218);
+.modalOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.pop-up-riddle {
-  position: fixed;
-  top: 0;
-  background-color: goldenrod;
+
+.modalContent {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
   width: 300px;
-  height: 200px;
+  cursor: default;
+}
+
+.modalHeader {
+  background: #eee;
+  padding: 0.5rem;
+  cursor: move;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.modalBody {
+  padding: 1rem;
 }

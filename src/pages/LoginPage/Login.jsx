@@ -12,6 +12,7 @@ export default function Login() {
       <p>Password</p>
       <input type="text" id="password" name="solution" autocomplete="off" />
       <br />
+      {/* TODO: change into contract */}
       <button onClick={() => changeState(STATES.AGENT_1)}>Submit</button>
     </div>
   );

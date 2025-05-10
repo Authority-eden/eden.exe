@@ -1,15 +1,14 @@
+import { STATES, useStateMachine } from "../../stateMachine";
 import "./Contract.module.css";
 
 export default function Contract() {
-  function CloseTab() {
-    window.close();
-  }
+  const { changeState } = useStateMachine();
 
   return (
     <div id="contract">
       <p>You need to accept the terms of this contract to proceed</p>
-      <button onClick={CloseTab}>Yes</button>
-      <button onClick={CloseTab}>No</button>
+      <button onClick={() => changeState(STATES.AGENT_1)}>Yes</button>
+      <button onClick={() => changeState(STATES.BAD_ENDING)}>No</button>
     </div>
   );
 }

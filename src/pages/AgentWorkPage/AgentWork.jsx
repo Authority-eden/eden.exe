@@ -1,3 +1,4 @@
+import { STATES, useStateMachine } from "../../stateMachine";
 import React from "react";
 import Modal from "react-modal";
 import NumbersContainer from "./components/NumbersContainer";
@@ -13,6 +14,7 @@ const targetSequences = [
 export default function AgentWork() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [sequences, setSequences] = React.useState(targetSequences);
+  const { changeState } = useStateMachine();
 
   function openModal() {
     setIsOpen(true);

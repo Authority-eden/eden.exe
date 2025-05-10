@@ -1,12 +1,12 @@
 import { STATES, useStateMachine } from "../../stateMachine";
-import "./SecretEnding.module.css";
+import "./NormalEnding.module.css";
 
-export default function Revolution() {
+export default function Congratulation() {
   const { changeState } = useStateMachine();
 
   return (
     <div>
-      <p>Hi. I'm Dr. Kaido. You are one of the chosen one.</p>
+      <p>Good job. Your work as an Agent is done.</p>
     </div>
   );
 }

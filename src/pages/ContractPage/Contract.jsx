@@ -1,5 +1,5 @@
 import { STATES, useStateMachine } from "../../stateMachine";
-import "./Contract.module.css";
+import "./contract.module.css";
 
 export default function Contract() {
   const { changeState } = useStateMachine();

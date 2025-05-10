@@ -20,6 +20,8 @@ footer div {
   margin: auto;
 }
 .pop-up-riddle {
+  position: fixed;
+  top: 0;
   background-color: goldenrod;
   width: 30vw;
   height: 20vh;

@@ -3,7 +3,7 @@ import React from "react";
 import Modal from "react-modal";
 import NumbersContainer from "./components/NumbersContainer";
 import SelectionBoxOverlay from "./components/SelectionBoxOverlay";
-import "./AgentWork.module.css";
+import "./agentWork.module.css";
 
 const targetSequences = [
   [3, 1, 4, 1],

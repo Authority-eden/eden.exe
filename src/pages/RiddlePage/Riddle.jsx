@@ -1,14 +1,18 @@
-import "./Riddle.module.css"
+import "./riddle.module.css";
 
 export default function Riddle() {
-  function CloseTab(){
-    window.close()
+  function CloseTab() {
+    window.close();
   }
 
   return (
     <div id="message">
-      <p>You clicked the special number!<br/>Have fun with the riddle!</p>
+      <p>
+        You clicked the special number!
+        <br />
+        Have fun with the riddle!
+      </p>
       <button onClick={CloseTab}>Close</button>
     </div>
-  )
+  );
 }

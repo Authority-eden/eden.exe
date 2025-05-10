@@ -1,5 +1,5 @@
 import { STATES, useStateMachine } from "../../stateMachine";
-import "./Login.module.css";
+import "./login.module.css";
 
 export default function Login() {
   const { changeState } = useStateMachine();

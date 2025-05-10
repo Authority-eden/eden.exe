@@ -5,6 +5,7 @@ import Contract from "./pages/ContractPage/Contract";
 import Termination from "./pages/BadEndingPage/BadEnding";
 import Congratulation from "./pages/NormalEndingPage/NormalEnding";
 import Revolution from "./pages/SecretEndingPage/SecretEnding";
+import Welcome from "./pages/WelcomePage/Welcome";
 
 export default function App() {
   const { currentState } = useStateMachine();
@@ -17,6 +18,8 @@ export default function App() {
 // TODO: change start from LOGIN to WELCOME
 function renderAppState(applicationState) {
   switch (applicationState) {
+    case STATES.WELCOME:
+      return <Welcome />;
     case STATES.CONTRACT_1:
       return <Contract />;
     case STATES.AGENT_1:

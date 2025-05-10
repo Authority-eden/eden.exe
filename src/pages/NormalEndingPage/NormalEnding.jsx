@@ -1,5 +1,5 @@
 import { STATES, useStateMachine } from "../../stateMachine";
-import "./NormalEnding.module.css";
+import "./normalEnding.module.css";
 
 export default function Congratulation() {
   const { changeState } = useStateMachine();

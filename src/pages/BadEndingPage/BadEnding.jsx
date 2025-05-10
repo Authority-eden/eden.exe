@@ -1,5 +1,5 @@
 import { STATES, useStateMachine } from "../../stateMachine";
-import "./BadEnding.module.css";
+import "./badEnding.module.css";
 
 export default function Termination() {
   const { changeState } = useStateMachine();

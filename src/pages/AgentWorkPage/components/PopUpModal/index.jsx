@@ -116,6 +116,7 @@ export default function PopUpModal({
           <button
             onClick={() => {
               onClose();
+              setViewedMessage((prev) => prev + 1);
             }}
           >
             Close

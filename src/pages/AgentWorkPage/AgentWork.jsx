@@ -27,18 +27,27 @@ export default function AgentWork() {
 
   // Define when to open the modal
   useEffect(() => {
-    if (deletedCount === targetSequences.length / 2 && viewedMessage === 0) {
+    if (viewedMessage === 0 && deletedCount === targetSequences.length / 2) {
       setShowMessageModal1(true);
-    } else if (viewedMessage === 1) {
+    } else if (viewedMessage === 1 && !showMessageModal2) {
       setShowMessageModal2(true);
-    } else if (viewedMessage === 2) {
+    } else if (viewedMessage === 2 && !showMessageModal3) {
       setShowMessageModal3(true);
-    } else if (deletedCount === (targetSequences.length * 5) / 6) {
+    } else if (
+      deletedCount === (targetSequences.length * 5) / 6 &&
+      !showRiddleModal
+    ) {
       setShowRiddleModal(true);
     } else if (deletedCount === targetSequences.length) {
       changeState(STATES.NORMAL_ENDING);
     }
-  }, [deletedCount, viewedMessage]);
+  }, [
+    deletedCount,
+    viewedMessage,
+    showMessageModal2,
+    showMessageModal3,
+    showRiddleModal,
+  ]);
 
   function incrementDeletedCount() {
     setDeletedCount((prev) => prev + 1);

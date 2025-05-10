@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
+import Modal from "react-modal";
 import "./index.css";
 import App from "./App.jsx";
 import Login from "./pages/LoginPage/Login.jsx";
@@ -10,6 +11,8 @@ import Termination from "./pages/BadEndingPage/BadEnding.jsx";
 import Riddle from "./pages/RiddlePage/Riddle.jsx";
 import Congratulation from "./pages/NormalEndingPage/NormalEnding.jsx";
 import Revolution from "./pages/SecretEndingPage/SecretEnding.jsx";
+
+Modal.setAppElement("#root");
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

@@ -16,11 +16,11 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/riddle" element={<Riddle />} />
         {/* TODO: understand if I really need this code */}
         {/* <Route path="/login" element={<Login />} />
         <Route path="/contract" element={<Contract />} />
         <Route path="/termination" element={<Termination />} />
-        <Route path="/riddle" element={<Riddle />} />
         <Route path="/congratulation" element={<Congratulation />} />
         <Route path="/72_65_76_6F_6C_75_74_69_6F_6E_0A" element={<Revolution />} /> */}
       </Routes>

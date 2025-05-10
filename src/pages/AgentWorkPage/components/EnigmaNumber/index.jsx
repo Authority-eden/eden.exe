@@ -22,7 +22,7 @@ export default function EnigmaNumber({
     if (isSpecial) {
       // TODO: make position relative
       window.open(
-        "/Riddle",
+        "/riddle",
         "_blank",
         "width=900, height=600, top=100, left=300"
       );

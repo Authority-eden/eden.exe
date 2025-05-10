@@ -6,9 +6,9 @@ import SelectionBoxOverlay from "./components/SelectionBoxOverlay";
 import "./agentWork.module.css";
 
 const targetSequences = [
-  [3, 1, 4, 1],
-  [2, 7, 1, 8],
-  [0, 5, 0],
+  [3, 1, 4, 1, 3, 1],
+  [2, 7, 1, 8, 1, 8],
+  [0, 5, 0, 5, 0, 5],
 ];
 
 export default function AgentWork() {

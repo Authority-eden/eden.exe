@@ -6,6 +6,8 @@ export default function NumbersContainer({
   cells = 600,
   specialCount = 3,
   targetSequences,
+  row = 20,
+  columns = cells / row,
 }) {
   // Offset to centre the div that is bigger than the screen
   useEffect(() => {
@@ -21,34 +23,46 @@ export default function NumbersContainer({
     .fill(null)
     .map(() => Math.floor(Math.random() * 10));
   // Track sequence positions
-  const usedIndices = new Set();
+  const sequenceIndices = new Set();
+  const insertedSequences = [];
 
-  // Inject each sequence at a unique random position without overlap
+  // Inject each sequence at a unique random position without overlap and
   targetSequences.forEach((seq) => {
     let inserted = false;
     while (!inserted) {
       const pos = Math.floor(Math.random() * (cells - seq.length));
-      const overlap = seq.some((_, i) => usedIndices.has(pos + i));
-      // Check for overlaps
-      if (!overlap) {
-        seq.forEach((num, i) => {
-          numbersArray[pos + i] = num;
-          usedIndices.add(pos + i);
-        });
-        inserted = true;
-      }
+
+      // Calculate row and column
+      const row = Math.floor(pos / columns);
+      const col = pos % columns;
+
+      // Ensure it fits in the current row
+      if (col + seq.length > columns) continue;
+
+      // Ensure no overlap
+      const overlap = seq.some((_, i) => sequenceIndices.has(pos + i));
+      if (overlap) continue;
+
+      // Insert
+      seq.forEach((num, i) => {
+        numbersArray[pos + i] = num;
+        sequenceIndices.add(pos + i);
+      });
+
+      insertedSequences.push({ startIndex: pos, values: [...seq] });
+      inserted = true;
     }
   });
 
-  // Generate specialIndices that do not overlap with usedIndices
+  // Generate specialIndices that do not overlap with sequenceIndices
   const specialIndices = new Set();
   while (
-    specialIndices.size < Math.min(specialCount, cells - usedIndices.size)
+    specialIndices.size < Math.min(specialCount, cells - sequenceIndices.size)
   ) {
     const idx = Math.floor(Math.random() * cells);
-    if (!usedIndices.has(idx)) {
+    if (!sequenceIndices.has(idx)) {
       specialIndices.add(idx);
-      usedIndices.add(idx); // Optionally reserve it
+      sequenceIndices.add(idx); // Optionally reserve it
     }
   }
 
@@ -59,7 +73,7 @@ export default function NumbersContainer({
       id={idx}
       number={num} // This is the actual value from numbersArray
       isSpecial={specialIndices.has(idx)}
-      isPartOfSequence={usedIndices.has(idx)}
+      isPartOfSequence={sequenceIndices.has(idx)}
     />
   ));
 
@@ -68,7 +82,7 @@ export default function NumbersContainer({
       <div
         id="data"
         style={{
-          gridTemplateColumns: generateTemplateColumnOption(cells / 20),
+          gridTemplateColumns: generateTemplateColumnOption(columns),
         }}
       >
         {numbers}
@@ -78,6 +92,6 @@ export default function NumbersContainer({
 }
 
 // The number of columns must be a divisor of the number of cells
-function generateTemplateColumnOption(value = 30) {
+function generateTemplateColumnOption(value) {
   return `repeat(${value}, 1fr)`;
 }

@@ -1,5 +1,5 @@
 /* External container of the data */
-#data-container{
+#data-container {
   position: absolute;
   top: 10vh;
   left: 0;
@@ -9,10 +9,9 @@
   scrollbar-width: none;
 }
 /* Internal container of the data (bigger than the screen size) */
-#data{
+#data {
   position: absolute;
   display: grid;
-  /* TODO: check unit based on screen window */
   width: 130vw;
   height: 130vh;
   padding: 10px;
@@ -28,15 +27,13 @@
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-
-
 
 body.dragging {
   user-select: none;

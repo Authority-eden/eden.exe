@@ -1,10 +1,18 @@
 import { STATES, useStateMachine } from "../../stateMachine";
-import { use, useState } from "react";
-import "./login.module.css";
+import { useEffect, useState } from "react";
+import styles from "./login.module.css";
 
 export default function Login() {
   const { changeState } = useStateMachine();
   const [errorCode, setErrorCode] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLogin(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
@@ -25,7 +33,7 @@ export default function Login() {
     }
   }
 
-  return (
+  return showLogin ? (
     <form method="post" onSubmit={handleSubmit}>
       <label>Username</label>
       <input type="text" id="user-name" name="username" autoComplete="off" />
@@ -41,5 +49,9 @@ export default function Login() {
         </div>
       ) : null}
     </form>
+  ) : (
+    <div className={styles.loading}>
+      <p>Loading...</p>
+    </div>
   );
 }

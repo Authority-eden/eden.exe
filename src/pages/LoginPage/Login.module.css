@@ -1,0 +1,5 @@
+.loading {
+  background-image: url(../../assets/tunnelBkg.gif);
+  background-repeat: no-repeat;
+  height: 100vh;
+}

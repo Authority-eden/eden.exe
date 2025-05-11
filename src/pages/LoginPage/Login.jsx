@@ -36,39 +36,41 @@ export default function Login() {
 
   return showLogin ? (
     <div className={styles.wrapper}>
-      <h1>Welcome to EDEN.exe</h1>
-      <h2>LOG IN</h2>
       <div>
-        <form method="post" onSubmit={handleSubmit}>
-          <div>
-            <span>
-              <label>Username</label>
-              <input
-                type="text"
-                id="user-name"
-                name="username"
-                autoComplete="off"
-              />
-            </span>
-            <span>
-              <label>Password</label>
-              <input
-                type="text"
-                id="password"
-                name="password"
-                autoComplete="off"
-              />
-            </span>
-          </div>
-          <br />
-          <button type="submit">Submit</button>
-          <br />
-          {errorCode ? (
+        <h1>Welcome to EDEN.exe</h1>
+        <h2>LOG IN</h2>
+        <div>
+          <form method="post" onSubmit={handleSubmit}>
             <div>
-              <p>*Wrong input</p>
+              <span>
+                <label>username</label>
+                <input
+                  type="text"
+                  id="user-name"
+                  name="username"
+                  autoComplete="off"
+                />
+              </span>
+              <span>
+                <label>password</label>
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  autoComplete="off"
+                />
+              </span>
             </div>
-          ) : null}
-        </form>
+            <br />
+            <button type="submit">Submit</button>
+            <br />
+            {errorCode ? (
+              <div className={styles.output}>
+                <p>*Wrong input</p>
+              </div>
+            ) : null}
+          </form>
+        </div>
       </div>
     </div>
   ) : (

@@ -46,5 +46,9 @@ button {
   color: #7493cc;
   border: 1px solid #7493cc;
   padding: 1vh 1vw;
-  box-shadow: 0 0 3px #7493cc;
+  box-shadow: 0 0 4px #7493cc;
+}
+h1,
+h2 {
+  color: white;
 }

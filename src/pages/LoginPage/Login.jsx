@@ -1,19 +1,45 @@
 import { STATES, useStateMachine } from "../../stateMachine";
+import { use, useState } from "react";
 import "./login.module.css";
 
 export default function Login() {
   const { changeState } = useStateMachine();
+  const [errorCode, setErrorCode] = useState(false);
+
+  function handleSubmit(e) {
+    // Prevent the browser from reloading the page
+    e.preventDefault();
+
+    // Read the form data
+    const form = e.target;
+    const formData = new FormData(form);
+    const formJson = Object.fromEntries(formData.entries());
+
+    if (
+      formJson.username === "anonagtzero" &&
+      formJson.password === "/0penGate"
+    ) {
+      changeState(STATES.CONTRACT_1);
+    } else {
+      setErrorCode(true);
+    }
+  }
 
   return (
-    <div>
-      <p>User name</p>
-      <input type="text" id="user-name" name="solution" autocomplete="off" />
+    <form method="post" onSubmit={handleSubmit}>
+      <label>Username</label>
+      <input type="text" id="user-name" name="username" autoComplete="off" />
       <br />
-      <p>Password</p>
-      <input type="text" id="password" name="solution" autocomplete="off" />
+      <label>Password</label>
+      <input type="text" id="password" name="password" autoComplete="off" />
       <br />
-      {/* TODO: change into contract */}
-      <button onClick={() => changeState(STATES.AGENT_1)}>Submit</button>
-    </div>
+      <button type="submit">Submit</button>
+      <br />
+      {errorCode ? (
+        <div>
+          <p>*Wrong input</p>
+        </div>
+      ) : null}
+    </form>
   );
 }

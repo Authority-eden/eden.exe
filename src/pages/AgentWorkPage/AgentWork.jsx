@@ -4,7 +4,6 @@ import { useState } from "react";
 import Modal from "react-modal";
 import NumbersContainer from "./components/NumbersContainer";
 import PopUpModal from "./components/PopUpModal";
-import styles from "./agentWork.module.css";
 
 const targetSequences = [];
 for (let i = 0; i < 6; i++) {

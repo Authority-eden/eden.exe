@@ -28,7 +28,7 @@ const TRANSITIONS = {
 };
 
 export const useStateMachine = create((set) => ({
-  currentState: STATES.AGENT_1,
+  currentState: STATES.LOGIN,
   changeState: (next) =>
     set((store) => {
       if (TRANSITIONS[store.currentState]?.includes(next)) {

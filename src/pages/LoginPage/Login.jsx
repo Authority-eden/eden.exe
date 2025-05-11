@@ -27,7 +27,7 @@ export default function Login() {
       formJson.username === "anonagtzero" &&
       formJson.password === "/0penGate"
     ) {
-      changeState(STATES.CONTRACT_1);
+      changeState(STATES.WELCOME);
     } else {
       setErrorCode(true);
     }

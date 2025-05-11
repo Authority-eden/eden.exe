@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import EnigmaNumber from "../EnigmaNumber";
 import SelectionBoxOverlay from "../SelectionBoxOverlay";
 import "./numbers.css";
@@ -15,22 +15,69 @@ export default function NumbersContainer({
   onSequenceDelete,
   suppressSelectionBox,
 }) {
+  const containerRef = useRef(null);
+  const isDragging = useRef(false);
+  const dragStart = useRef({ x: 0, y: 0 });
+  const scrollStart = useRef({ left: 0, top: 0 });
+  const [isRightClickDragging, setIsRightClickDragging] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
+    container.scrollTop = (container.scrollHeight - container.clientHeight) / 2;
+
+    // Prevent right-click context menu
+    const preventContextMenu = (e) => e.preventDefault();
+    container.addEventListener("contextmenu", preventContextMenu);
+
+    return () => {
+      container.removeEventListener("contextmenu", preventContextMenu);
+    };
+  }, []);
+
+  function handleMouseDown(e) {
+    if (e.button === 2) {
+      // right mouse button
+      isDragging.current = true;
+      setIsRightClickDragging(true);
+      dragStart.current = { x: e.clientX, y: e.clientY };
+      scrollStart.current = {
+        left: containerRef.current.scrollLeft,
+        top: containerRef.current.scrollTop,
+      };
+    }
+  }
+
+  function handleMouseMove(e) {
+    if (isDragging.current) {
+      const dx = e.clientX - dragStart.current.x;
+      const dy = e.clientY - dragStart.current.y;
+      containerRef.current.scrollLeft = scrollStart.current.left - dx;
+      containerRef.current.scrollTop = scrollStart.current.top - dy;
+    }
+  }
+
+  function handleMouseUp() {
+    isDragging.current = false;
+    setIsRightClickDragging(false);
+  }
+
   // useState to avoid re-renders
   const [grid, setGrid] = useState(() =>
     generateGrid(cells, columns, specialCount, targetSequences)
   );
 
-  // Offset to centre the div that is bigger than the screen
-  useEffect(() => {
-    const container = document.getElementById("data-container");
-    const data = document.getElementById("data");
-
-    container.scrollLeft = (data.offsetWidth - container.clientWidth) / 2;
-    container.scrollTop = (data.offsetHeight - container.clientHeight) / 2;
-  }, []);
-
   return (
-    <div id="data-container">
+    <div
+      id="data-container"
+      ref={containerRef}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      style={{
+        cursor: isRightClickDragging ? "grabbing" : "default",
+      }}
+    >
       <div
         id="data"
         style={{

@@ -1,18 +1,14 @@
-import "./riddle.module.css";
+import { RIDDLE_PATH } from "../../pathNames";
+import styles from "./riddle.module.css";
 
 export default function ColorCoded() {
-  function CloseTab() {
-    window.close();
-  }
-
   return (
-    <div id="message">
-      <p>
-        REEEEEED EVERYWHEERE
-        <br />
-        Have fun with the riddle!
-      </p>
-      <button onClick={CloseTab}>Close</button>
+    <div className={styles.riddleContainer}>
+      <img
+        src={`${RIDDLE_PATH}pixel_grid.png`}
+        alt="pixel grid"
+        className={styles.colorCoded}
+      />
     </div>
   );
 }

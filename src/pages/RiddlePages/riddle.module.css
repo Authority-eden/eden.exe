@@ -1,3 +1,13 @@
-#message {
-  text-align: center;
+.riddleContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Color coded riddle style */
+.colorCoded {
+  height: 500px;
 }

@@ -1,5 +1,6 @@
 import { STATES, useStateMachine } from "../../stateMachine";
 import { useEffect, useState } from "react";
+import { IDENTITY_PATH } from "../../pathNames";
 import styles from "./login.module.css";
 
 export default function Login() {
@@ -10,7 +11,7 @@ export default function Login() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLogin(true);
-    }, 5000);
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -34,24 +35,43 @@ export default function Login() {
   }
 
   return showLogin ? (
-    <form method="post" onSubmit={handleSubmit}>
-      <label>Username</label>
-      <input type="text" id="user-name" name="username" autoComplete="off" />
-      <br />
-      <label>Password</label>
-      <input type="text" id="password" name="password" autoComplete="off" />
-      <br />
-      <button type="submit">Submit</button>
-      <br />
-      {errorCode ? (
-        <div>
-          <p>*Wrong input</p>
-        </div>
-      ) : null}
-    </form>
-  ) : (
-    <div className={styles.loading}>
-      <p>Loading...</p>
+    <div className={styles.wrapper}>
+      <h1>Welcome to EDEN.exe</h1>
+      <h2>LOG IN</h2>
+      <div>
+        <form method="post" onSubmit={handleSubmit}>
+          <div>
+            <span>
+              <label>Username</label>
+              <input
+                type="text"
+                id="user-name"
+                name="username"
+                autoComplete="off"
+              />
+            </span>
+            <span>
+              <label>Password</label>
+              <input
+                type="text"
+                id="password"
+                name="password"
+                autoComplete="off"
+              />
+            </span>
+          </div>
+          <br />
+          <button type="submit">Submit</button>
+          <br />
+          {errorCode ? (
+            <div>
+              <p>*Wrong input</p>
+            </div>
+          ) : null}
+        </form>
+      </div>
     </div>
+  ) : (
+    <img src={`${IDENTITY_PATH}loading.png`} className={styles.loading} />
   );
 }

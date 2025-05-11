@@ -66,7 +66,7 @@ export default function Contract() {
       <p> The Authority.</p>
       <br />
 
-      <button onClick={() => changeState(STATES.AGENT_1)}>[ACCEPT]</button>
+      <button onClick={() => changeState(STATES.INSTRUCTIONS)}>[ACCEPT]</button>
       <button onClick={() => changeState(STATES.BAD_ENDING)}>[DECLINE]</button>
     </div>
   );

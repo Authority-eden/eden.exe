@@ -2,10 +2,11 @@ import { STATES, useStateMachine } from "./stateMachine";
 import AgentWork from "./pages/AgentWorkPage/AgentWork";
 import Login from "./pages/LoginPage/Login";
 import Contract from "./pages/ContractPage/Contract";
-import Termination from "./pages/BadEndingPage/BadEnding";
-import Congratulation from "./pages/NormalEndingPage/NormalEnding";
-import Revolution from "./pages/SecretEndingPage/SecretEnding";
+import Termination from "./pages/Endings/BadEnding";
+import Congratulation from "./pages/Endings/NormalEnding";
+import Revolution from "./pages/Endings/SecretEnding";
 import Welcome from "./pages/WelcomePage/Welcome";
+import Instructions from "./pages/WelcomePage/Instructions";
 
 export default function App() {
   const { currentState } = useStateMachine();
@@ -22,6 +23,8 @@ function renderAppState(applicationState) {
       return <Welcome />;
     case STATES.CONTRACT_1:
       return <Contract />;
+    case STATES.INSTRUCTIONS:
+      return <Instructions />;
     case STATES.AGENT_1:
       return <AgentWork />;
     case STATES.BAD_ENDING:

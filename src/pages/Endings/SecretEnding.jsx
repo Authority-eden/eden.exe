@@ -1,5 +1,5 @@
 import { STATES, useStateMachine } from "../../stateMachine";
-import "./secretEnding.module.css";
+import styles from "./ending.module.css";
 
 export default function Revolution() {
   const { changeState } = useStateMachine();

@@ -1,0 +1,46 @@
+{
+  "hash": "26fcefa4",
+  "configHash": "ff9a54a2",
+  "lockfileHash": "ebbdc703",
+  "browserHash": "af234009",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "3d437f33",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "1a8e1269",
+      "needsInterop": true
+    },
+    "react-router": {
+      "src": "../../node_modules/react-router/dist/development/index.mjs",
+      "file": "react-router.js",
+      "fileHash": "3da3f085",
+      "needsInterop": false
+    },
+    "react-modal": {
+      "src": "../../node_modules/react-modal/lib/index.js",
+      "file": "react-modal.js",
+      "fileHash": "fceb7a91",
+      "needsInterop": true
+    },
+    "zustand": {
+      "src": "../../node_modules/zustand/esm/index.mjs",
+      "file": "zustand.js",
+      "fileHash": "e991bfc5",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-VMOYVQZT": {
+      "file": "chunk-VMOYVQZT.js"
+    },
+    "chunk-KQ7WO6A7": {
+      "file": "chunk-KQ7WO6A7.js"
+    }
+  }
+}

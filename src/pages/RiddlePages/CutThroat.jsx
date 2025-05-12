@@ -1,10 +1,12 @@
 import { RIDDLE_PATH } from "../../pathNames";
-import "./riddle.module.css";
+import styles from "./riddle.module.css";
 
 export default function CutThroat() {
   return (
-    <a href={`${RIDDLE_PATH}cut_throat.zip`} download>
-      <button>Download Riddle ZIP</button>
-    </a>
+    <div className={styles.riddleContainer}>
+      <a href={`${RIDDLE_PATH}cut_throat.zip`} download>
+        <button>Download cut_throat ZIP</button>
+      </a>
+    </div>
   );
 }

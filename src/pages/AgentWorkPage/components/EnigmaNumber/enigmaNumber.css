@@ -1,6 +1,6 @@
 /* Sequence of numbers needed for agent work */
 .numbers.sequence {
-  color: chartreuse;
+  /* color: chartreuse; */
   animation: wiggle 1s infinite;
 }
 @keyframes wiggle {
@@ -8,15 +8,25 @@
     transform: rotate(0deg);
     opacity: 1;
   }
+  10% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-20deg);
+    opacity: 0.7;
+  }
+  20% {
+    transform: rotate(0deg);
+  }
   80% {
     transform: rotate(0deg);
   }
   85% {
-    transform: rotate(10deg);
+    transform: rotate(20deg);
     opacity: 0.7;
   }
   95% {
-    transform: rotate(-10deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(0deg);
@@ -27,24 +37,48 @@
 /* Glitched number to open riddle */
 /* TODO: improve animation and style */
 .numbers.special-number {
-  color: red;
+  /* color: red; */
   font-weight: bold;
-  animation: pulse 1.5s infinite;
+  animation: glitch-wiggle 1.5s infinite;
   cursor: pointer;
 }
 
-@keyframes pulse {
+@keyframes glitch-wiggle {
   0% {
-    transform: scale(1);
-    opacity: 1;
+    transform: rotate(0deg);
   }
-  50% {
-    transform: scale(1.2);
+  10% {
+    transform: rotate(0deg);
+    color: #7493cc;
+  }
+  15% {
+    transform: rotate(-20deg);
+    opacity: 1;
+    color: #fcc23b;
+  }
+  20% {
+    transform: rotate(0deg);
+    color: #7493cc;
+  }
+  40% {
     opacity: 0.7;
   }
-  100% {
-    transform: scale(1);
+  80% {
+    transform: rotate(0deg);
+    color: #7493cc;
+  }
+  85% {
+    transform: rotate(20deg);
     opacity: 1;
+    color: #fcc23b;
+  }
+  95% {
+    transform: rotate(0deg);
+    color: #7493cc;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0.7;
   }
 }
 /* TODO: hide/lower opacity the number after visiting */

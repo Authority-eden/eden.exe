@@ -5,9 +5,16 @@
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
+  background-color: black;
 }
 
 /* Color coded riddle style */
 .colorCoded {
   height: 500px;
+}
+.riddleContainer button {
+  color: #fcc23b;
+  border: 1px solid#fcc23b;
+  box-shadow: 0 0 4px #fcc23b;
+  background-color: black;
 }

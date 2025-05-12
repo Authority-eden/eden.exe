@@ -84,7 +84,11 @@ export default function PopUpModal({
     if (typeOfMessage === "popUpMessage1") {
       return (
         <div>
-          <div>CIAOOOOO</div>
+          <div>
+            They can’t stop me, I see through their web of lies. I left the
+            breadcrumbs to follow. A shadow on the corner, the glitches in the
+            system. They tell you more than the False Prophet ever could.
+          </div>
           <button
             onClick={() => {
               onClose();
@@ -98,7 +102,12 @@ export default function PopUpModal({
     } else if (typeOfMessage === "popUpMessage2") {
       return (
         <div>
-          <div>come va</div>
+          <div>
+            I talk in riddles, but the answers are always there to be found.
+            Everything matters, nothing is a coincidence. The records must be
+            kept away from prying eyes. Save it, search for it, you can only
+            trust yourself.
+          </div>
           <button
             onClick={() => {
               onClose();
@@ -112,7 +121,11 @@ export default function PopUpModal({
     } else if (typeOfMessage === "popUpMessage3") {
       return (
         <div>
-          <div>non bene</div>
+          <div>
+            There is always more to uncover, sometimes you need to think outside
+            the box, to move beyond the constraints of this cage. You have the
+            power of a world of knowledge in your hands. Use it.
+          </div>
           <button
             onClick={() => {
               onClose();

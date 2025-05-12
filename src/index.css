@@ -22,6 +22,7 @@ body {
   color: #7493cc;
   font-family: "Chakra Petch", monospace;
   user-select: none;
+  font-size: 1.35rem;
 }
 /* Animation on body before leaving the page */
 /* TODO: improve zoom-in animation */

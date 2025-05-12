@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 10vh 10vw;
+  text-align: justify;
+}
+
+.container {
+  border: 1px solid #7493cc;
+  padding: 6vh 6vw;
+  box-shadow: 0 0 4px #7493cc;
+}
+.highlight {
+  color: #ffffff;
+}
+
+.container button {
+  float: right;
+}

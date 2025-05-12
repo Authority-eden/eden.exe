@@ -20,9 +20,9 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/eden.exe" element={<App />} />
-        <Route path="/cut_throat" element={<CutThroat />} />
-        <Route path="/color_coded" element={<ColorCoded />} />
+        <Route path="/eden.exe/" element={<App />} />
+        <Route path="/eden.exe/cut_throat" element={<CutThroat />} />
+        <Route path="/eden.exe/color_coded" element={<ColorCoded />} />
         {/* To delete later */}
         {/* <Route path="/agent_work" element={<AgentWork />} />
         <Route path="/login" element={<Login />} />

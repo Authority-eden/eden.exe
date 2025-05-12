@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")).render(
           element={<CutThroat />}
         />
         <Route
-          path={`${import.meta.env.BASE_URL}color-coded`}
+          path={`${import.meta.env.BASE_URL}color_coded`}
           element={<ColorCoded />}
         />
         {/* To delete later */}

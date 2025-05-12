@@ -24,7 +24,7 @@ export default function EnigmaNumber({
       const page = riddlePage;
       if (page) {
         window.open(
-          `/${page}`,
+          `/eden.exe/${page}`,
           "_blank",
           "width=900, height=600, top=100, left=300"
         );

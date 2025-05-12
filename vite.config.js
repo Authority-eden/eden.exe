@@ -7,5 +7,9 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist' // make sure this matches
+  },
+  // This sets up SPA fallback
+  server: {
+    historyApiFallback: true
   }
 })

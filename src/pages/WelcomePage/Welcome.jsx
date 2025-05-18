@@ -8,16 +8,17 @@ export default function Welcome() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <h1>Welcome back, Agent</h1>
-        <p>
-          You have 1 task to complete today
+        <p style={{ marginTop: "1vh" }}>
+          You have <span className={styles.highlight}>1</span> task to complete
+          today
           <br />
           <br />
-          As you know, EDEN (External Defensive Engineering Network) and its
-          continued service requires routine reaffirmation of procedural
-          consent. Please read your mandatory{" "}
+          As you know,{" "}
           <span className={styles.highlight}>
-            Terms of Compliance Agreement
+            EDEN (External Defensive Engineering Network)
           </span>{" "}
+          and its continued service requires routine reaffirmation of procedural
+          consent. Please read your mandatory Terms of Compliance Agreement
           carefully and accept the conditions whenever you’re ready to get
           started.
         </p>

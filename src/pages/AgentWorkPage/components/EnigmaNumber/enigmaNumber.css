@@ -1,6 +1,5 @@
 /* Sequence of numbers needed for agent work */
 .numbers.sequence {
-  /* color: chartreuse; */
   animation: wiggle 1s infinite;
 }
 @keyframes wiggle {
@@ -37,7 +36,6 @@
 /* Glitched number to open riddle */
 /* TODO: improve animation and style */
 .numbers.special-number {
-  /* color: red; */
   font-weight: bold;
   animation: glitch-wiggle 1.5s infinite;
   cursor: pointer;

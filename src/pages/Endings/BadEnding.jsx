@@ -18,13 +18,14 @@ export default function Termination() {
           <br />
           You have been warned, at the beginning of your work in The Department,
           that the acceptance of our Terms of Compliance Agreement is protocol
-          and mandatory. Its rejection then calls for your immediate and urgent
-          termination.
+          and mandatory. Its rejection then calls for your immediate and urgent{" "}
+          <span className={styles.highlight}>termination</span>.
           <br />
           <br />
-          The Authority regrets your departure, AGENT ANONAGTZERO, ID NO.
-          8195309, and wishes you success for any future career opportunities
-          you may find.
+          The Authority regrets your departure, AGENT{" "}
+          <span className={styles.highlight}>ANONAGTZERO</span>, ID NO.
+          <span className={styles.highlight}>8195309</span>, and wishes you
+          success for any future career opportunities you may find.
           <br />
           <br />
           Please return all your company belongings to the front desk, or leave

@@ -5,51 +5,63 @@
 }
 
 @font-face {
-  font-family: "Chakra Petch";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/chakrapetch/v12/cIflMapbsEk7TDLdtEz1BwkeNIh1R5_F_gUk0w.woff2)
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-    U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Steps Mono";
+  src: url(./assets/font/Steps-Mono-Thin.otf);
+  font-weight: thin;
 }
 
 body {
   overscroll-behavior: none;
   background-color: #0a101c;
   color: #7493cc;
-  font-family: "Chakra Petch", monospace;
+  font-family: "Steps Mono", monospace;
   user-select: none;
   font-size: 1.35rem;
 }
-/* Animation on body before leaving the page */
-/* TODO: improve zoom-in animation */
-body.zoom-in {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transform: scale(1.5);
-  opacity: 0;
-  overflow: hidden;
-}
 
-/* Animation on body before leaving the page */
-/* TODO: improve zoom-out animation */
-body.zoom-out {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transform: scale(0.95);
-  opacity: 0;
+header,
+footer {
+  background-color: #0a101c;
+  border: 1px solid #7493cc;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  z-index: 1;
+  text-align: center;
+}
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div {
+  margin: auto;
 }
 
 button {
   background-color: #0a101c;
-  font-family: "Chakra Petch", monospace;
+  font-family: "Steps Mono", monospace;
   color: #7493cc;
   border: 1px solid #7493cc;
   padding: 1vh 1vw;
-  box-shadow: 0 0 4px #7493cc;
 }
 h1,
 h2 {
   color: white;
+  text-align: left;
+}
+
+button:hover {
+  box-shadow: 0 0 4px #7493cc;
+  cursor: pointer;
+}
+button:active {
+  box-shadow: 0 0 4px white;
+  color: white;
+  border: 1px solid white;
 }

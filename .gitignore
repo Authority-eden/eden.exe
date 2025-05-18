@@ -11,6 +11,7 @@ node_modules/
 
 # Vite build output
 dist/
+.vite
 
 # Static files cache
 *.cache

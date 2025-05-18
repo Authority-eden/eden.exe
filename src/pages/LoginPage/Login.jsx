@@ -38,7 +38,7 @@ export default function Login() {
     <div className={styles.wrapper}>
       <div>
         <h1>Welcome to EDEN.exe</h1>
-        <h2>LOG IN</h2>
+        <h2 style={{ textAlign: "center" }}>LOG IN</h2>
         <div>
           <form method="post" onSubmit={handleSubmit}>
             <div>
@@ -66,7 +66,7 @@ export default function Login() {
             <br />
             {errorCode ? (
               <div className={styles.output}>
-                <p>*Wrong input</p>
+                <p>//wrong input</p>
               </div>
             ) : null}
           </form>
@@ -74,6 +74,9 @@ export default function Login() {
       </div>
     </div>
   ) : (
-    <img src={`${IDENTITY_PATH}loading.png`} className={styles.loading} />
+    // Loading screen
+    <div className={styles.loginImage}>
+      <img src={`${IDENTITY_PATH}loading.png`} className={styles.loading} />
+    </div>
   );
 }

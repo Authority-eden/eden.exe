@@ -30,13 +30,31 @@ createRoot(document.getElementById("root")).render(
           element={<ColorCoded />}
         />
         {/* To delete later */}
-        {/* <Route path="/agent_work" element={<AgentWork />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/contract" element={<Contract />} />
-        <Route path="/congratulation" element={<Congratulation />} />
-        <Route path="/welcome" element={<Welcome />} />
-        <Route path="/termination" element={<Termination />} />
-        <Route path="/instructions" element={<Instructions />} /> */}
+        <Route
+          path={`${import.meta.env.BASE_URL}agent_work`}
+          element={<AgentWork />}
+        />
+        <Route path={`${import.meta.env.BASE_URL}login`} element={<Login />} />
+        {/*  <Route
+          path={`${import.meta.env.BASE_URL}contract`}
+          element={<Contract />}
+        /> 
+        <Route
+          path={`${import.meta.env.BASE_URL}instructions`}
+          element={<Instructions />}
+        />
+          <Route
+            path={`${import.meta.env.BASE_URL}welcome`}
+            element={<Welcome />}
+          />
+        <Route
+          path={`${import.meta.env.BASE_URL}congratulation`}
+          element={<Congratulation />}
+        />
+        <Route
+          path={`${import.meta.env.BASE_URL}termination`}
+          element={<Termination />}
+        />*/}
       </Routes>
     </BrowserRouter>
   </StrictMode>

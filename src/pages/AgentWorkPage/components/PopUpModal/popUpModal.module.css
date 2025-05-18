@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap");
+
+.dialog {
+  scale: 3;
+}
+
+.message {
+  width: 30vw;
+}
+
+.minimizedButton {
+  color: #fcc23b;
+  background-color: black;
+  border: none;
+  font-family: "M PLUS 1 Code", monospace;
+}
+.minimizedButton:hover {
+  box-shadow: none;
+}
+.minimizedButton:active {
+  box-shadow: none;
+  color: #fc9b3b;
+  text-shadow: 0 0 8px #fc9b3b;
+  border: none;
+}
+
+.messageText {
+  color: #fcc23b;
+  width: 25vw;
+  font-family: "M PLUS 1 Code", monospace;
+}
+.modalButton {
+  position: absolute;
+  right: 1.5vw;
+  top: 1.5vw;
+  color: #fcc23b;
+  border: 1px solid #fcc23b;
+  background-color: black;
+  float: right;
+  font-size: 1.3rem;
+  font-family: "M PLUS 1 Code", monospace;
+}
+
+.modalButton:hover {
+  box-shadow: 0 0 8px #fcc23b;
+}
+.modalButton:active {
+  color: #fc9b3b;
+  box-shadow: 0 0 8px #fc9b3b;
+  border: 1px solid #fc9b3b;
+}
+
+.messageText {
+  margin-top: 1vh;
+}

@@ -1,68 +1,86 @@
-header,
-footer {
-  background-color: #0a101c;
-  border: 1px solid #74b9ff;
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 10vh;
-  z-index: 1;
-  text-align: center;
-}
-header {
-  top: 0;
-}
-footer {
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer div {
-  margin: auto;
-}
-.modalOverlay {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modalContent {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  width: 300px;
-  cursor: default;
-}
-
-.modalHeader {
-  background: #eee;
-  padding: 0.5rem;
-  cursor: move;
-  font-weight: bold;
-  border-bottom: 1px solid #ccc;
-}
-
-.modalBody {
-  padding: 1rem;
-}
-
-.message {
-  color: #fcc23b;
-  max-width: 30vw;
-}
-.message button {
-  color: #fcc23b;
-  border: 1px solid #fcc23b;
-  box-shadow: 0 0 4px #fcc23b;
-  background-color: black;
-  float: right;
-  font-size: 1.3rem;
-}
-
-/* progress {
-  
-  width: 30vw;
-  height: 3vh;
-  background-color: #0a101c;
+progress {
   border: 1px solid #7493cc;
-} */
+  width: 30vw;
+  height: 4vh;
+  box-shadow: 0 0 4px #7493cc;
+  padding: 0.5vh;
+  background-clip: padding-box;
+  transform: scaleX(-1);
+}
+progress::-webkit-progress-bar {
+  background: linear-gradient(
+    to right,
+    #7493cc,
+    #7493cc 4%,
+    #0a101c 4%,
+    #0a101c 6%,
+    #7493cc 6%,
+    #7493cc 10%,
+    #0a101c 10%,
+    #0a101c 12%,
+    #7493cc 12%,
+    #7493cc 16%,
+    #0a101c 16%,
+    #0a101c 18%,
+    #7493cc 18%,
+    #7493cc 22%,
+    #0a101c 22%,
+    #0a101c 24%,
+    #7493cc 24%,
+    #7493cc 28%,
+    #0a101c 28%,
+    #0a101c 30%,
+    #7493cc 30%,
+    #7493cc 34%,
+    #0a101c 34%,
+    #0a101c 36%,
+    #7493cc 36%,
+    #7493cc 40%,
+    #0a101c 40%,
+    #0a101c 42%,
+    #7493cc 42%,
+    #7493cc 46%,
+    #0a101c 46%,
+    #0a101c 48%,
+    #7493cc 48%,
+    #7493cc 52%,
+    #0a101c 52%,
+    #0a101c 54%,
+    #7493cc 54%,
+    #7493cc 58%,
+    #0a101c 58%,
+    #0a101c 60%,
+    #7493cc 60%,
+    #7493cc 64%,
+    #0a101c 64%,
+    #0a101c 66%,
+    #7493cc 66%,
+    #7493cc 70%,
+    #0a101c 70%,
+    #0a101c 72%,
+    #7493cc 72%,
+    #7493cc 76%,
+    #0a101c 76%,
+    #0a101c 78%,
+    #7493cc 78%,
+    #7493cc 82%,
+    #0a101c 82%,
+    #0a101c 84%,
+    #7493cc 84%,
+    #7493cc 88%,
+    #0a101c 88%,
+    #0a101c 90%,
+    #7493cc 90%,
+    #7493cc 94%,
+    #0a101c 94%,
+    #0a101c 96%,
+    #7493cc 96%,
+    #7493cc 100%,
+    #0a101c 100%,
+    #0a101c
+  );
+}
+progress::-webkit-progress-value {
+  background-color: black;
+  opacity: 1;
+}

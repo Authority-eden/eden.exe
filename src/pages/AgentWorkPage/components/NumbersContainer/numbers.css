@@ -16,6 +16,9 @@
   height: 130vh;
   padding: 10px;
 }
+#data:hover {
+  cursor: crosshair;
+}
 
 /* TODO: understand why on the right there is more space than on the right */
 

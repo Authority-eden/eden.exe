@@ -1,9 +1,9 @@
 import { STATES, useStateMachine } from "../../stateMachine";
 import { useEffect } from "react";
 import { useState } from "react";
-import Modal from "react-modal";
 import NumbersContainer from "./components/NumbersContainer";
 import PopUpModal from "./components/PopUpModal";
+import styles from "./AgentWork.module.css";
 
 const targetSequences = [];
 for (let i = 0; i < 6; i++) {
@@ -16,7 +16,7 @@ export default function AgentWork() {
   const { changeState } = useStateMachine();
   // TODO: keep this for when more agent phases
   const [sequences, setSequences] = useState(targetSequences);
-  const [deletedCount, setDeletedCount] = useState(0);
+  const [deletedCount, setDeletedCount] = useState(6);
   const [showMessageModal1, setShowMessageModal1] = useState(false);
   const [showMessageModal2, setShowMessageModal2] = useState(false);
   const [showMessageModal3, setShowMessageModal3] = useState(false);
@@ -33,11 +33,11 @@ export default function AgentWork() {
     } else if (viewedMessage === 2 && !showMessageModal3) {
       setShowMessageModal3(true);
     } else if (
-      deletedCount === (targetSequences.length * 5) / 6 &&
+      deletedCount === targetSequences.length / 6 &&
       !showRiddleModal
     ) {
       setShowRiddleModal(true);
-    } else if (deletedCount === targetSequences.length) {
+    } else if (deletedCount === 0) {
       changeState(STATES.NORMAL_ENDING);
     }
   }, [
@@ -49,13 +49,13 @@ export default function AgentWork() {
   ]);
 
   function incrementDeletedCount() {
-    setDeletedCount((prev) => prev + 1);
+    setDeletedCount((prev) => prev - 1);
   }
 
   return (
     <>
       <header>
-        <h1>EDEN.EXE</h1>
+        <h1>EDEN.exe</h1>
       </header>
 
       <NumbersContainer

@@ -8,11 +8,13 @@ export default function Congratulation() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <h1>All tasks have been completed.</h1>
-
         <br />
         <p>
-          Good job, AGENT ANONAGTZERO, ID NO. 8195309. You have finished all of
-          your daily tasks, deleting a total of 6 corrupted data sequences.
+          Good job, AGENT <span className={styles.highlight}>ANONAGTZERO</span>,
+          ID NO.<span className={styles.highlight}> 8195309</span>.
+          <br />
+          You have finished all of your daily tasks, deleting a total of{" "}
+          <span className={styles.highlight}>6</span> corrupted data sequences.
           <br />
           <br />
           Because of you, and your tireless effort, EDEN can maintain its proper

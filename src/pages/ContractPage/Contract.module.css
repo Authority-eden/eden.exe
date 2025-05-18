@@ -17,6 +17,7 @@
   box-shadow: 0 0 4px #7493cc;
   height: 80vh;
   overflow: scroll;
+  scrollbar-width: none;
 }
 
 .highlight {
@@ -32,4 +33,14 @@
 
 .sign button {
   margin: 5px;
+}
+
+ul {
+  text-align: left;
+  list-style-type: square;
+  margin-left: 2vw;
+  margin-top: 1rem;
+}
+li {
+  padding-bottom: 0.5rem;
 }

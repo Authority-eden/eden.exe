@@ -32,6 +32,11 @@ footer {
 }
 header {
   top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2vh;
 }
 footer {
   bottom: 0;
@@ -54,6 +59,13 @@ h1,
 h2 {
   color: white;
   text-align: left;
+}
+
+header h1 {
+  max-height: 2.2rem;
+  /* padding-top: 1.2vh; */
+  margin-left: 1.2vw;
+  font-size: 2.2rem;
 }
 
 button:hover {

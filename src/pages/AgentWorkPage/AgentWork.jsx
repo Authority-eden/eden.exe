@@ -56,6 +56,29 @@ export default function AgentWork() {
     <>
       <header>
         <h1>EDEN.exe</h1>
+        <div className={styles.instructions}>
+          <div>
+            <p>
+              TASK:
+              <br />
+              select corrupted strings
+            </p>
+          </div>
+          <div>
+            <p>
+              SELECT:
+              <br />
+              left click + drag
+            </p>
+          </div>
+          <div>
+            <p>
+              NAVIGATE:
+              <br />
+              right click + drag
+            </p>
+          </div>
+        </div>
       </header>
 
       <NumbersContainer

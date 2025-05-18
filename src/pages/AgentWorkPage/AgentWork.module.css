@@ -84,3 +84,18 @@ progress::-webkit-progress-value {
   background-color: black;
   opacity: 1;
 }
+
+.instructions {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 38vw;
+  padding: 0 1vw;
+  text-align: left;
+}
+.instructions div {
+  padding: 1vh;
+
+  border-left: 1px solid #7493cc;
+}

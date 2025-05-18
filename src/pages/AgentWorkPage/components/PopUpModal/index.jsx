@@ -46,10 +46,10 @@ export default function PopUpModal({
   const minimizedCustomStyles = {
     content: {
       position: "absolute",
-      top: `5vh`,
-      left: `80vw`,
-      right: "auto",
-      bottom: "auto",
+      bottom: `5vh`,
+      right: `90vw`,
+      left: "auto",
+      top: "auto",
       padding: "1rem",
       width: "auto",
       height: "auto",
@@ -75,8 +75,8 @@ export default function PopUpModal({
       let centerX;
       let centerY;
       if (typeOfMessage === "popUpRiddle") {
-        centerX = window.innerWidth / 2 - 225;
-        centerY = window.innerHeight / 2 - 200;
+        centerX = window.innerWidth / 2 - 150;
+        centerY = window.innerHeight / 2 - 250;
       } else {
         centerX = window.innerWidth / 2 - 200;
         centerY = window.innerHeight / 2 - 100;
@@ -195,11 +195,11 @@ export default function PopUpModal({
       );
     } else if (typeOfMessage === "popUpRiddle") {
       return (
-        <CeaserPopUp
+        <CaesarPopUp
           startDrag={startDrag}
           minimized={minimized}
           setMinimized={setMinimized}
-        ></CeaserPopUp>
+        ></CaesarPopUp>
       );
     } else {
       return null;
@@ -251,19 +251,18 @@ const PopUpMessage = ({ startDrag, handleClick, text }) => {
   );
 };
 
-const CeaserPopUp = ({ startDrag, minimized, setMinimized }) => {
+const CaesarPopUp = ({ startDrag, minimized, setMinimized }) => {
   return !minimized ? (
-    <div className={styles.message}>
+    <div
+      className={styles.message}
+      style={{ maxWidth: "19vw", textAlign: "center" }}
+    >
       <button className={styles.modalButton} onClick={() => setMinimized(true)}>
         &minus;
       </button>
       <div onMouseDown={startDrag}>
-        <img
-          src={`${RIDDLE_PATH}caesar.jpg`}
-          draggable="false"
-          height={"300px"}
-        />
-        <span className={styles.messageText} style={{ textAlign: "center" }}>
+        <img src={`${RIDDLE_PATH}caesar.jpg`} draggable="false" />
+        <span className={styles.messageText} style={{}}>
           <p>FIXVECEP</p>
         </span>
       </div>

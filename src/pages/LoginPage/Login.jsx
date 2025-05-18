@@ -29,6 +29,11 @@ export default function Login() {
       formJson.password === "/0penGate"
     ) {
       changeState(STATES.WELCOME);
+    } else if (
+      formJson.username === "halflightmemo" &&
+      formJson.password === "l0st-t1meline$"
+    ) {
+      changeState(STATES.SECRET_ENDING);
     } else {
       setErrorCode(true);
     }

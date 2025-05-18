@@ -3,13 +3,11 @@ import EnigmaNumber from "../EnigmaNumber";
 import SelectionBoxOverlay from "../SelectionBoxOverlay";
 import "./numbers.css";
 
-const riddleNames = ["color_coded", "cut_throat"];
-
 export default function NumbersContainer({
   cells = 600,
   row = 20,
   columns = cells / row,
-  specialCount = 2,
+  specialCount = 3,
   targetSequences,
   sequenceLength = 6,
   onSequenceDelete,
@@ -142,7 +140,7 @@ function generateGrid(cells, columns, specialCount, targetSequences) {
   });
 
   // Riddles list – must match specialCount length
-  const riddleNames = ["color_coded", "cut_throat"]; // Add more if needed
+  const riddleNames = ["color_coded", "cut_throat", "half_half"]; // Add more if needed
   if (riddleNames.length !== specialCount) {
     throw new Error("Riddle count must match specialCount.");
   }

@@ -13,6 +13,7 @@
   background-color: black;
   border: none;
   font-family: "M PLUS 1 Code", monospace;
+  padding: 1.5vh;
 }
 .minimizedButton:hover {
   box-shadow: none;

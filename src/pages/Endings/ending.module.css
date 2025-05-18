@@ -1,4 +1,7 @@
-.wrapper {
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap");
+
+.wrapper,
+.finalWrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -20,4 +23,45 @@
 
 .highlight {
   color: white;
+}
+
+.errorContainer {
+  color: #ea5353;
+  border: 1px solid #ea5353;
+  padding: 6vh 6vw;
+  box-shadow: 0 0 4px #ea5353;
+  animation: error 1s infinite;
+  z-index: 3000;
+}
+
+@keyframes error {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: skew(0.8deg);
+  }
+  40% {
+    transform: translateX(-1px);
+  }
+  60% {
+    transform: skew(-0.8deg);
+  }
+  80% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.finalWrapper {
+  color: #fcc23b;
+  background-color: black;
+  font-family: "M PLUS 1 Code", monospace;
+}
+.finalState {
+  border: 1px solid#fcc23b;
+  padding: 6vh 6vw;
+  box-shadow: 0 0 8px #fcc23b;
 }

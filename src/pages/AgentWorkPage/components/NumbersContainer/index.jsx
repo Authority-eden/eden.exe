@@ -4,7 +4,7 @@ import SelectionBoxOverlay from "../SelectionBoxOverlay";
 import "./numbers.css";
 
 export default function NumbersContainer({
-  cells = 600,
+  cells = 1000,
   row = 20,
   columns = cells / row,
   specialCount = 3,

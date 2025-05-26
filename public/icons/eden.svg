@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 343.82 343.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0a101c;
+      }
+
+      .cls-2 {
+        filter: url(#outer-glow-1);
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+        stroke: #7492cb;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        filter: url(#outer-glow-3);
+      }
+
+      .cls-4 {
+        filter: url(#outer-glow-4);
+      }
+
+      .cls-5 {
+        filter: url(#outer-glow-5);
+      }
+
+      .cls-6 {
+        filter: url(#outer-glow-2);
+      }
+    </style>
+    <filter id="outer-glow-1" x="73.39" y="37.82" width="197" height="88" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#fff" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-2" x="217.39" y="73.82" width="89" height="197" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-2" stdDeviation="5"/>
+      <feFlood flood-color="#fff" flood-opacity=".75"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-3" x="73.39" y="217.82" width="197" height="88" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-3" stdDeviation="5"/>
+      <feFlood flood-color="#fff" flood-opacity=".75"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-4" x="37.39" y="73.82" width="89" height="197" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-4" stdDeviation="5"/>
+      <feFlood flood-color="#fff" flood-opacity=".75"/>
+      <feComposite in2="blur-4" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-5" x="120.39" y="120.82" width="104" height="103" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-5" stdDeviation="5"/>
+      <feFlood flood-color="#fff" flood-opacity=".75"/>
+      <feComposite in2="blur-5" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="sfondo">
+    <circle class="cls-1" cx="171.91" cy="171.91" r="171.91"/>
+  </g>
+  <g id="cerchio">
+    <g>
+      <path id="arco_1" data-name="arco 1" class="cls-2" d="M113.16,107.19c31.6-30.15,86.11-30.14,117.7,0,4-4.03,16.72-16.7,20.56-20.56-42.66-41.39-116.14-41.43-158.82,0,3.8,3.78,16.54,16.55,20.56,20.56Z"/>
+      <path id="arco_2" data-name="arco 2" class="cls-6" d="M257.29,92.5c-3.77,3.79-16.56,16.54-20.56,20.56,30.15,31.6,30.14,86.11,0,117.7,4.04,4.01,16.7,16.72,20.56,20.56,41.41-42.66,41.41-116.16,0-158.82Z"/>
+      <path id="arco_3" data-name="arco 3" class="cls-3" d="M230.86,236.62c-33.34,30.41-84.36,30.41-117.7,0-4,4.02-16.71,16.68-20.52,20.56,42.67,41.45,116.12,41.38,158.78,0-3.79-3.77-16.54-16.56-20.56-20.56Z"/>
+      <path id="arco_4" data-name="arco 4" class="cls-4" d="M107.29,230.76c-30.41-33.34-30.41-84.36,0-117.7l-20.56-20.56c-41.67,44.72-41.67,114.05,0,158.78,3.78-3.75,16.57-16.51,20.56-20.52Z"/>
+      <circle id="cerchio-2" data-name="cerchio" class="cls-5" cx="172.41" cy="172.32" r="34"/>
+    </g>
+  </g>
+</svg>

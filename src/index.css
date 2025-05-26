@@ -5,6 +5,18 @@
 }
 
 @font-face {
+  font-family: "Chakra Petch";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/chakrapetch/v12/cIflMapbsEk7TDLdtEz1BwkeNIh1R5_F_gUk0w.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
   font-family: "Steps Mono";
   src: url(./assets/font/Steps-Mono-Thin.otf);
   font-weight: thin;
@@ -61,11 +73,21 @@ h2 {
   text-align: left;
 }
 
-header h1 {
+#eyeLogo {
+  padding-left: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#eyeLogo h1 {
   max-height: 2.2rem;
   /* padding-top: 1.2vh; */
   margin-left: 1.2vw;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  font-family: "Chakra Petch";
 }
 
 button:hover {

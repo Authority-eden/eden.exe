@@ -82,5 +82,6 @@
 /* Lower opacity after visiting */
 .visited-special-number {
   opacity: 0.2;
+  color: #fcc23b;
   cursor: pointer;
 }

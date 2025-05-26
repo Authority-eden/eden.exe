@@ -1,0 +1,36 @@
+.eyeContainer {
+  background-image: url(/icons/emptyLogo.svg);
+  background-repeat: no-repeat;
+  height: 6vh;
+  width: 6vh;
+}
+
+.eye,
+.eyeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  height: 2vh;
+  width: 2vh;
+  border-radius: 50%;
+  position: relative;
+  margin: 2vh;
+}
+
+.pupil {
+  width: 1.4vh;
+  height: 1.4vh;
+  border-radius: 50%;
+  border: 0.2vh solid #7492cb;
+  box-shadow: 0 0 2px #8f9db5, inset 0 0 2px #8f9db5;
+  position: absolute;
+  transition: transform 0.1s linear;
+}
+
+.pupil.closed {
+  height: 4px;
+  border-radius: 50% / 100%;
+}

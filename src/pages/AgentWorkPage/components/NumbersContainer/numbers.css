@@ -12,8 +12,8 @@
 #data {
   position: absolute;
   display: grid;
-  width: 130vw;
-  height: 130vh;
+  width: 200vw;
+  height: 200vh;
   padding: 10px;
 }
 #data:hover {

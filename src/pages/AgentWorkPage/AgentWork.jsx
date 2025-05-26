@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import NumbersContainer from "./components/NumbersContainer";
 import PopUpModal from "./components/PopUpModal";
+import EyeTracker from "./components/EyeTracker";
 import styles from "./AgentWork.module.css";
 
 const targetSequences = [];
@@ -55,7 +56,10 @@ export default function AgentWork() {
   return (
     <>
       <header>
-        <h1>EDEN.exe</h1>
+        <div id="eyeLogo">
+          <EyeTracker />
+          <h1>EDEN.exe</h1>
+        </div>
         <div className={styles.instructions}>
           <div>
             <p>

@@ -6,6 +6,7 @@ import styles from "./login.module.css";
 export default function Login() {
   const { changeState } = useStateMachine();
   const [errorCode, setErrorCode] = useState(false);
+  const [zeroCode, setZeroCode] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
 
   useEffect(() => {
@@ -24,7 +25,9 @@ export default function Login() {
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
 
-    if (
+    if (formJson.password === "/OpenGate") {
+      setZeroCode(true);
+    } else if (
       formJson.username === "anonagtzero" &&
       formJson.password === "/0penGate"
     ) {
@@ -66,14 +69,21 @@ export default function Login() {
                 />
               </span>
             </div>
+
             <br />
             <button type="submit">Submit</button>
             <br />
-            {errorCode ? (
-              <div className={styles.output}>
-                <p>//wrong input</p>
-              </div>
-            ) : null}
+            <>
+              {errorCode ? (
+                <div className={styles.output}>
+                  <p>//wrong input</p>
+                </div>
+              ) : zeroCode ? (
+                <div className={styles.output}>
+                  <p>//it's a zero (0), not a O</p>
+                </div>
+              ) : null}
+            </>
           </form>
         </div>
       </div>

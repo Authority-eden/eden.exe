@@ -34,7 +34,7 @@ Wouldn’t want to forget that...
 - Casini Francesca
 - Figueiredo Caeiro Alice
 - Garipova Dariia
-- Pereira De Jesus Beatriz Ines
+- De Jesus Pereira Beatriz Inês
 
 _Polytechnic University of Milan </br>
 School of Design </br>

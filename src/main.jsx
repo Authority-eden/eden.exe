@@ -7,7 +7,9 @@ import App from "./App.jsx";
 import CutThroat from "./pages/RiddlePages/CutThroat.jsx";
 import ColorCoded from "./pages/RiddlePages/ColorCoded.jsx";
 import HalfHalf from "./pages/RiddlePages/HalfHalf.jsx";
+/* --------------------------------- */
 import AgentWork from "./pages/AgentWorkPage/AgentWork.jsx";
+import Contract from "./pages/ContractPage/Contract.jsx";
 
 Modal.setAppElement("#root");
 
@@ -32,6 +34,14 @@ createRoot(document.getElementById("root")).render(
         <Route
           path={`${import.meta.env.BASE_URL}agent_work`}
           element={<AgentWork />}
+        />
+        <Route
+          path={`${import.meta.env.BASE_URL}contract`}
+          element={<Contract />}
+        />
+        <Route
+          path={`${import.meta.env.BASE_URL}welcome`}
+          element={<Welcome />}
         />
       </Routes>
     </BrowserRouter>

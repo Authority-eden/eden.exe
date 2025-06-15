@@ -15,7 +15,6 @@ for (let i = 0; i < 6; i++) {
 
 export default function AgentWork() {
   const { changeState } = useStateMachine();
-  // TODO: keep this for when more agent phases
   const [sequences, setSequences] = useState(targetSequences);
   const [deletedCount, setDeletedCount] = useState(6);
   const [showMessageModal1, setShowMessageModal1] = useState(false);

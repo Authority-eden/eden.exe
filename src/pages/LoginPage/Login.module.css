@@ -1,18 +1,5 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  height: 100vh;
   text-align: center;
-}
-
-.loginImage {
-  max-width: 100vw;
-}
-
-.wrapper {
   padding: 15vh 0;
 }
 .wrapper h1 {
@@ -24,6 +11,34 @@
   margin-bottom: 6vh;
   font-size: 2.25rem;
 }
+.wrapper,
+.loadingState,
+.loadingLogo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.wrapper,
+.loadingState {
+  height: 100vh;
+  align-items: center;
+}
+.loadingState {
+  max-width: 100vw;
+  justify-content: center;
+  /* background-image: url(/icons/loading.jpg); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.loadingLogo {
+  align-content: space-between;
+  background-color: #0a101c;
+  padding: 1vh;
+  border: 1px solid #7493cc;
+  height: 20vh;
+}
+
 input {
   background-color: #0a101c;
   color: #7493cc;
@@ -71,4 +86,92 @@ form div {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+}
+
+/* Loading bar */
+progress {
+  border: 1px solid #7493cc;
+  width: 30vw;
+  height: 4vh;
+  box-shadow: 0 0 4px #7493cc;
+  padding: 0.5vh;
+  background-clip: padding-box;
+  transform: scaleX(-1);
+}
+progress::-webkit-progress-bar {
+  background: linear-gradient(
+    to right,
+    #7493cc,
+    #7493cc 4%,
+    #0a101c 4%,
+    #0a101c 6%,
+    #7493cc 6%,
+    #7493cc 10%,
+    #0a101c 10%,
+    #0a101c 12%,
+    #7493cc 12%,
+    #7493cc 16%,
+    #0a101c 16%,
+    #0a101c 18%,
+    #7493cc 18%,
+    #7493cc 22%,
+    #0a101c 22%,
+    #0a101c 24%,
+    #7493cc 24%,
+    #7493cc 28%,
+    #0a101c 28%,
+    #0a101c 30%,
+    #7493cc 30%,
+    #7493cc 34%,
+    #0a101c 34%,
+    #0a101c 36%,
+    #7493cc 36%,
+    #7493cc 40%,
+    #0a101c 40%,
+    #0a101c 42%,
+    #7493cc 42%,
+    #7493cc 46%,
+    #0a101c 46%,
+    #0a101c 48%,
+    #7493cc 48%,
+    #7493cc 52%,
+    #0a101c 52%,
+    #0a101c 54%,
+    #7493cc 54%,
+    #7493cc 58%,
+    #0a101c 58%,
+    #0a101c 60%,
+    #7493cc 60%,
+    #7493cc 64%,
+    #0a101c 64%,
+    #0a101c 66%,
+    #7493cc 66%,
+    #7493cc 70%,
+    #0a101c 70%,
+    #0a101c 72%,
+    #7493cc 72%,
+    #7493cc 76%,
+    #0a101c 76%,
+    #0a101c 78%,
+    #7493cc 78%,
+    #7493cc 82%,
+    #0a101c 82%,
+    #0a101c 84%,
+    #7493cc 84%,
+    #7493cc 88%,
+    #0a101c 88%,
+    #0a101c 90%,
+    #7493cc 90%,
+    #7493cc 94%,
+    #0a101c 94%,
+    #0a101c 96%,
+    #7493cc 96%,
+    #7493cc 100%,
+    #0a101c 100%,
+    #0a101c
+  );
+}
+progress::-webkit-progress-value {
+  background-color: black;
+  opacity: 1;
 }

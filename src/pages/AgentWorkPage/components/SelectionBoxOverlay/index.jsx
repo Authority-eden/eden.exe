@@ -82,12 +82,19 @@ export default function SelectionBoxOverlay({
 
       const selectedSequence = sorted.map((s) => s.value);
 
+      const allVisible = sorted.every(({ el }) => {
+        const style = window.getComputedStyle(el);
+        return style.visibility !== "hidden";
+      });
+
       // Check if the selected sequence matches the target sequence
-      const matches = targetSequences.some(
-        (seq) =>
-          selectedSequence.length === seq.length &&
-          selectedSequence.every((val, i) => val === seq[i])
-      );
+      const matches =
+        allVisible &&
+        targetSequences.some(
+          (seq) =>
+            sorted.length === seq.length &&
+            sorted.every((s, i) => s.value === seq[i])
+        );
       // If they match, then hide them
       if (matches) {
         onSequenceDelete();

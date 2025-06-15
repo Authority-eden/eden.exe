@@ -22,7 +22,7 @@ export default function Contract() {
           <br />
           <br />
           <h3 className={styles.highlight}>1. Data Collection and Usage</h3>
-          <p>
+          <div>
             Throughout your assignment, The Authority may collect relevant
             input, behavioural signals, and interactional patterns in order to
             maintain operational excellence.
@@ -41,11 +41,11 @@ export default function Contract() {
               </li>
               <li>No further action is required on your part.</li>
             </ul>
-          </p>
+          </div>
           <br />
           <br />
           <h3 className={styles.highlight}>2. Security Protocol</h3>
-          <p>
+          <div>
             For the safety and stability of the system, routine observation may
             occur. This includes passive monitoring and interpretation of
             behavioural tendencies, response timing, and decision patterns.
@@ -57,11 +57,11 @@ export default function Contract() {
                 level.
               </li>
             </ul>
-          </p>
+          </div>
           <br />
           <br />
           <h3 className={styles.highlight}> 3. Acknowledgment of Risk</h3>
-          <p>
+          <div>
             By continuing:
             <br />
             <ul>
@@ -78,7 +78,7 @@ export default function Contract() {
               <li>Order begins where questions end.</li>
             </ul>
             <br />
-          </p>
+          </div>
           <br />
 
           <p style={{ textAlign: "left" }}>

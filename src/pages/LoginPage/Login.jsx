@@ -8,17 +8,52 @@ export default function Login() {
   const [errorCode, setErrorCode] = useState(false);
   const [zeroCode, setZeroCode] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [loadingValue, setLoadingValue] = useState();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLogin(true);
-    }, 4000);
-    return () => clearTimeout(timer);
+    let startTime = null;
+    const duration = 6666;
+
+    function animate(time) {
+      if (!startTime) startTime = time;
+      const elapsed = time - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      const value = 1 / (1 + progress * 55);
+      setLoadingValue(value);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setLoadingValue(0); // Final value
+        setShowLogin(true);
+      }
+    }
+
+    const animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
   }, []);
+
+  // Auto-clear messages after 2.5s
+  useEffect(() => {
+    let timeout;
+    if (errorCode || zeroCode) {
+      timeout = setTimeout(() => {
+        setErrorCode(false);
+        setZeroCode(false);
+      }, 2500);
+    }
+    return () => clearTimeout(timeout);
+  }, [errorCode, zeroCode]);
 
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
     e.preventDefault();
+
+    // Reset both before checking again
+    setErrorCode(false);
+    setZeroCode(false);
 
     // Read the form data
     const form = e.target;
@@ -74,15 +109,13 @@ export default function Login() {
             <button type="submit">Submit</button>
             <br />
             <>
-              {errorCode ? (
+              {(errorCode || zeroCode) && (
                 <div className={styles.output}>
-                  <p>//wrong input</p>
+                  <p>
+                    {errorCode ? "//wrong input" : "//it's a zero (0), not a O"}
+                  </p>
                 </div>
-              ) : zeroCode ? (
-                <div className={styles.output}>
-                  <p>//it's a zero (0), not a O</p>
-                </div>
-              ) : null}
+              )}
             </>
           </form>
         </div>
@@ -90,8 +123,11 @@ export default function Login() {
     </div>
   ) : (
     // Loading screen
-    <div className={styles.loginImage}>
-      <img src={`${IDENTITY_PATH}loading.png`} className={styles.loading} />
+    <div className={styles.loadingState}>
+      <div className={styles.loadingLogo}>
+        <div>ANIMATED EDEN LOGO</div>
+        <progress value={loadingValue} />
+      </div>
     </div>
   );
 }

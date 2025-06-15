@@ -13,17 +13,31 @@ export default function Welcome() {
           today
           <br />
           <br />
-          As you know,{" "}
-          <span className={styles.highlight}>
-            EDEN (External Defensive Engineering Network)
+          <br />
+          As you know, EDEN (External Defensive Engineering Network) and its
+          continued service requires routine reaffirmation of procedural
+          consent.
+          <br />
+          <br />
+          Please{" "}
+          <span
+            className={styles.highlight}
+            onClick={() => changeState(STATES.CONTRACT_1)}
+          >
+            {" "}
+            read your mandatory Terms of Compliance Agreement carefully
           </span>{" "}
-          and its continued service requires routine reaffirmation of procedural
-          consent. Please read your mandatory Terms of Compliance Agreement
-          carefully and accept the conditions whenever you’re ready to get
-          started.
+          and accept the conditions whenever you’re ready to get started.
         </p>
         <br />
-        <button onClick={() => changeState(STATES.CONTRACT_1)}>Continue</button>
+        <button
+          onClick={() => changeState(STATES.CONTRACT_1)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") changeState(STATES.CONTRACT_1);
+          }}
+        >
+          Read Terms
+        </button>
       </div>
     </div>
   );

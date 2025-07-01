@@ -53,4 +53,5 @@
 
 .messageText {
   margin-top: 1vh;
+  user-select: none;
 }

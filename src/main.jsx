@@ -10,8 +10,7 @@ import ColorCoded from "./pages/RiddlePages/ColorCoded.jsx";
 import HalfHalf from "./pages/RiddlePages/HalfHalf.jsx";
 /* --------------------------------- */
 import AgentWork from "./pages/AgentWorkPage/AgentWork.jsx";
-import Contract from "./pages/ContractPage/Contract.jsx";
-import Login from "./pages/LoginPage/Login.jsx";
+import Revolution from "./pages/Endings/SecretEnding.jsx";
 
 Modal.setAppElement("#root");
 
@@ -37,6 +36,10 @@ createRoot(document.getElementById("root")).render(
         <Route
           path={`${import.meta.env.BASE_URL}agent_work`}
           element={<AgentWork />}
+        />
+        <Route
+          path={`${import.meta.env.BASE_URL}revolution`}
+          element={<Revolution />}
         />
       </Routes>
     </BrowserRouter>

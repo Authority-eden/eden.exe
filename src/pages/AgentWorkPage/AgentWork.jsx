@@ -69,7 +69,7 @@ export default function AgentWork() {
           </div>
           <div>
             <p>
-              SELECT:
+              SELECT & DELETE:
               <br />
               left click + drag
             </p>

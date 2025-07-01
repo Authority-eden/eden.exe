@@ -14,15 +14,18 @@
   overflow: hidden;
 }
 
-.container {
-  border: 1px solid #7493cc;
+.container,
+.finalState {
   height: 80vh;
-  padding: 6vh 6vw;
+  padding: 10vh 6vw;
+  border: 1px solid #7493cc;
   box-shadow: 0 0 4px #7493cc;
   overflow: scroll;
   scrollbar-width: none;
+  padding-bottom: 15vh;
 }
-.out {
+
+.container button {
   float: right;
 }
 
@@ -60,13 +63,27 @@
   }
 }
 
-.finalWrapper {
+.finalWrapper,
+.finalState button {
   color: #fcc23b;
   background-color: black;
   font-family: "M PLUS 1 Code", monospace;
 }
 .finalState {
   border: 1px solid#fcc23b;
-  padding: 6vh 6vw;
   box-shadow: 0 0 8px #fcc23b;
+  text-align: left;
+}
+
+.finalState button {
+  float: right;
+  border: 1px solid#fcc23b;
+}
+.finalState button:hover {
+  box-shadow: 0 0 8px #fcc23b;
+}
+.finalState button:active {
+  color: #fc9b3b;
+  box-shadow: 0 0 8px #fc9b3b;
+  border: 1px solid #fc9b3b;
 }

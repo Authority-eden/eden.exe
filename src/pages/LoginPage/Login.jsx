@@ -129,10 +129,10 @@ export default function Login() {
         <Lottie
           animationData={logoAnim}
           loop={true}
-          style={{ height: 200, width: 200 }}
+          style={{ height: 200, width: 200, marginBottom: 40 }}
         />
-        <div>ANIMATED EDEN LOGO</div>
         <progress value={loadingValue} />
+        <p>LOADING EDEN.exe</p>
       </div>
     </div>
   );

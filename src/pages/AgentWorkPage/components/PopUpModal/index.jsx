@@ -33,6 +33,7 @@ export default function PopUpModal({
       backgroundColor: "rgba(0,0,0,0.8)",
       border: "1px solid #fcc23b",
       boxShadow: "0 0 4px  #fcc23b",
+      userSelect: "none",
       transform: `scale(${scale})`,
       transition: "transform 0.3s ease-out",
     },

@@ -11,7 +11,7 @@ export default function Contract() {
           <h1>TERMS OF COMPLIANCE AGREEMENT </h1>
           <br />
           <br />
-          <br />
+
           <p>
             <span className={styles.lineHeight}>
               {" "}
@@ -22,7 +22,6 @@ export default function Contract() {
             By proceeding beyond this screen, you hereby voluntarily and
             irrevocably agree to the following terms set forth by The Authority:
           </p>
-          <br />
           <br />
 
           <h3 className={styles.lineHeight}>1. Data Collection and Usage</h3>
@@ -49,7 +48,7 @@ export default function Contract() {
             </ul>
           </div>
           <br />
-          <br />
+
           <h3 className={styles.lineHeight}>2. Security Protocol</h3>
           <div>
             For the safety and stability of the system,{" "}
@@ -66,7 +65,7 @@ export default function Contract() {
             </ul>
           </div>
           <br />
-          <br />
+
           <h3 className={styles.lineHeight}> 3. Acknowledgment of Risk</h3>
           <div>
             By continuing:
@@ -80,12 +79,12 @@ export default function Contract() {
                 in this job;
               </li>
               <li>
-                You accept that{" "}
+                You accept that your actions will have lasting ramifications
+                within and beyond the assignment and that{" "}
                 <span className={styles.highlight}>
-                  your actions will have lasting ramifications within and beyond
-                  the assignment
+                  your choices may affect progression
                 </span>{" "}
-                and that your choices may affect progression and assessment;
+                and assessment;
               </li>
               <li>
                 You understand that all protocols are designed with your{" "}

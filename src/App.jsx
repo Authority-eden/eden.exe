@@ -7,7 +7,6 @@ import Congratulation from "./pages/Endings/NormalEnding";
 import Revolution from "./pages/Endings/SecretEnding";
 import Welcome from "./pages/WelcomePage/Welcome";
 import Instructions from "./pages/WelcomePage/Instructions";
-import Info from "./pages/WelcomePage/GamePage";
 
 export default function App() {
   const { currentState } = useStateMachine();
@@ -17,7 +16,6 @@ export default function App() {
 }
 
 // Render each state of the application based on the current state
-// TODO: change start from LOGIN to INFO
 function renderAppState(applicationState) {
   switch (applicationState) {
     case STATES.WELCOME:

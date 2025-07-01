@@ -31,10 +31,10 @@
   box-shadow: 0 0 8px #fc9b3b;
   border: 1px solid #fc9b3b;
 }
-span .riddleContainer {
-  user-select: auto !important;
+.riddleContainer span {
+  user-select: none;
 }
-/* ::selection {
+.riddleContainer p::selection {
   color: black;
   background: #fcc23b;
-} */
+}

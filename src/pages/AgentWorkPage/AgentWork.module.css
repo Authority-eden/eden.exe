@@ -81,7 +81,7 @@ progress::-webkit-progress-bar {
   );
 }
 progress::-webkit-progress-value {
-  background-color: black;
+  background-color: #0a101c;
   opacity: 1;
 }
 
@@ -91,11 +91,15 @@ progress::-webkit-progress-value {
   flex-direction: row;
   justify-content: space-between;
   width: 38vw;
+  height: 6vh;
   padding: 0 1vw;
   text-align: left;
 }
 .instructions div {
-  padding: 1vh;
-
+  padding: 0 0.5vw;
   border-left: 1px solid #7493cc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
 }

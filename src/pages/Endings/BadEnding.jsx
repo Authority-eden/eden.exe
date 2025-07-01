@@ -9,6 +9,7 @@ export default function Termination() {
       <div className={styles.container}>
         <h1>Terms of Compliance Agreement rejected.</h1>
         <br />
+        <br />
         <p>
           The nature of your job as an Agent is of the utmost importance and
           value. The data dealt with calls for all the{" "}
@@ -38,6 +39,8 @@ export default function Termination() {
           <br />
           As always, <span className={styles.highlight}>The Authority</span> is
           most grateful for your work.
+          <br />
+          <br />
         </p>
         <div className={styles.out}>
           <button onClick={() => changeState(STATES.LOGIN)}>

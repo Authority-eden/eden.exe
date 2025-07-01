@@ -13,19 +13,25 @@ export default function Contract() {
           <br />
           <br />
           <p>
-            AGENT <span className={styles.highlight}>ANONAGTZERO</span>, ID NO.{" "}
-            <span className={styles.highlight}>8195309</span>,
+            <span className={styles.lineHeight}>
+              {" "}
+              AGENT <span className={styles.highlight}>ANONAGTZERO</span>, ID
+              NO. <span className={styles.highlight}>8195309</span>,
+            </span>
             <br />
             By proceeding beyond this screen, you hereby voluntarily and
             irrevocably agree to the following terms set forth by The Authority:
           </p>
           <br />
           <br />
-          <h3 className={styles.highlight}>1. Data Collection and Usage</h3>
+
+          <h3 className={styles.lineHeight}>1. Data Collection and Usage</h3>
           <div>
-            Throughout your assignment, The Authority may collect relevant
-            input, behavioural signals, and interactional patterns in order to
-            maintain operational excellence.
+            Throughout your assignment, The Authority may collect relevant{" "}
+            <span className={styles.highlight}>input</span>,{" "}
+            <span className={styles.highlight}>behavioural signals</span>, and{" "}
+            <span className={styles.highlight}>interactional patterns</span> in
+            order to maintain operational excellence.
             <br />
             <br />
             You understand that:
@@ -44,9 +50,10 @@ export default function Contract() {
           </div>
           <br />
           <br />
-          <h3 className={styles.highlight}>2. Security Protocol</h3>
+          <h3 className={styles.lineHeight}>2. Security Protocol</h3>
           <div>
-            For the safety and stability of the system, routine observation may
+            For the safety and stability of the system,{" "}
+            <span className={styles.highlight}>routine observation</span> may
             occur. This includes passive monitoring and interpretation of
             behavioural tendencies, response timing, and decision patterns.
             <ul>
@@ -60,22 +67,36 @@ export default function Contract() {
           </div>
           <br />
           <br />
-          <h3 className={styles.highlight}> 3. Acknowledgment of Risk</h3>
+          <h3 className={styles.lineHeight}> 3. Acknowledgment of Risk</h3>
           <div>
             By continuing:
             <br />
             <ul>
-              <li>You reaffirm your voluntary participation in this job;</li>
               <li>
-                You accept that your actions will have lasting ramifications
-                within and beyond the assignment and that your choices may
-                affect progression and assessment;
+                You reaffirm your{" "}
+                <span className={styles.highlight}>
+                  voluntary participation
+                </span>{" "}
+                in this job;
               </li>
               <li>
-                You understand that all protocols are designed with your best
-                performance in mind;
+                You accept that{" "}
+                <span className={styles.highlight}>
+                  your actions will have lasting ramifications within and beyond
+                  the assignment
+                </span>{" "}
+                and that your choices may affect progression and assessment;
               </li>
-              <li>Order begins where questions end.</li>
+              <li>
+                You understand that all protocols are designed with your{" "}
+                <span className={styles.highlight}>best performance</span> in
+                mind;
+              </li>
+              <li>
+                <span className={styles.highlight}>
+                  Order begins where questions end.
+                </span>
+              </li>
             </ul>
             <br />
           </div>
@@ -86,7 +107,7 @@ export default function Contract() {
             compliance is assumed and binding.
           </p>
           <br />
-          <p>The Authority.</p>
+          <p className={styles.highlight}>The Authority.</p>
           <br />
           <div className={styles.sign}>
             <button onClick={() => changeState(STATES.INSTRUCTIONS)}>

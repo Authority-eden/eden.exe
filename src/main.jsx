@@ -4,12 +4,14 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Modal from "react-modal";
 import "./index.css";
 import App from "./App.jsx";
+import GamePage from "./pages/WelcomePage/GamePage.jsx";
 import CutThroat from "./pages/RiddlePages/CutThroat.jsx";
 import ColorCoded from "./pages/RiddlePages/ColorCoded.jsx";
 import HalfHalf from "./pages/RiddlePages/HalfHalf.jsx";
 /* --------------------------------- */
 import AgentWork from "./pages/AgentWorkPage/AgentWork.jsx";
 import Contract from "./pages/ContractPage/Contract.jsx";
+import Login from "./pages/LoginPage/Login.jsx";
 
 Modal.setAppElement("#root");
 
@@ -17,7 +19,8 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/eden.exe/" element={<App />} />
+        <Route path="/eden.exe/" element={<GamePage />} />
+        <Route path={`${import.meta.env.BASE_URL}app`} element={<App />} />
         <Route
           path={`${import.meta.env.BASE_URL}cut_throat`}
           element={<CutThroat />}
@@ -34,14 +37,6 @@ createRoot(document.getElementById("root")).render(
         <Route
           path={`${import.meta.env.BASE_URL}agent_work`}
           element={<AgentWork />}
-        />
-        <Route
-          path={`${import.meta.env.BASE_URL}contract`}
-          element={<Contract />}
-        />
-        <Route
-          path={`${import.meta.env.BASE_URL}welcome`}
-          element={<Welcome />}
         />
       </Routes>
     </BrowserRouter>

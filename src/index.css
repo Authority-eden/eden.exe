@@ -27,8 +27,8 @@ body {
   background-color: #0a101c;
   color: #7493cc;
   font-family: "Steps Mono", monospace;
-  user-select: none;
   font-size: 1.35rem;
+  line-height: 1.4;
 }
 
 header,
@@ -68,9 +68,14 @@ button {
   padding: 1vh 1vw;
 }
 h1,
-h2 {
+h2,
+h3 {
   color: white;
   text-align: left;
+}
+
+h3 {
+  font-size: 1.7rem;
 }
 
 #eyeLogo {
@@ -98,4 +103,9 @@ button:active {
   box-shadow: 0 0 4px white;
   color: white;
   border: 1px solid white;
+}
+
+::selection {
+  color: #0a101c;
+  background: white;
 }

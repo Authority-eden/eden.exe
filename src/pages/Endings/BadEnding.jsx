@@ -11,7 +11,8 @@ export default function Termination() {
         <br />
         <p>
           The nature of your job as an Agent is of the utmost importance and
-          value. The data dealt with calls for all the care and discretion
+          value. The data dealt with calls for all the{" "}
+          <span className={styles.highlight}>care and discretion</span>{" "}
           possible, and, as such, The Authority must ensure its manoeuvring is
           closely monitored.
           <br />
@@ -35,7 +36,8 @@ export default function Termination() {
           now ex-superior, who has already been warned of your departure.
           <br />
           <br />
-          As always, The Authority is most grateful for your work.
+          As always, <span className={styles.highlight}>The Authority</span> is
+          most grateful for your work.
         </p>
         <div className={styles.out}>
           <button onClick={() => changeState(STATES.LOGIN)}>

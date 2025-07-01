@@ -7,7 +7,7 @@ export default function HalfHalf() {
         16 is only half the answer
         <br />
         <br />
-        01001110 01000101 01010111 01010011
+        <span>01001110 01000101 01010111 01010011</span>
       </p>
     </div>
   );

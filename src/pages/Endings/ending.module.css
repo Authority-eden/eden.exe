@@ -11,11 +11,16 @@
   height: 100vh;
   padding: 10vh 10vw;
   text-align: justify;
+  overflow: hidden;
 }
+
 .container {
   border: 1px solid #7493cc;
+  height: 80vh;
   padding: 6vh 6vw;
   box-shadow: 0 0 4px #7493cc;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 .out {
   float: right;

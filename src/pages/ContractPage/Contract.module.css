@@ -44,3 +44,7 @@ ul {
 li {
   padding-bottom: 0.5rem;
 }
+
+.lineHeight {
+  line-height: 2;
+}

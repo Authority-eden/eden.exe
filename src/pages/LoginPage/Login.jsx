@@ -1,7 +1,8 @@
 import { STATES, useStateMachine } from "../../stateMachine";
 import { useEffect, useState } from "react";
-import { IDENTITY_PATH } from "../../pathNames";
 import styles from "./login.module.css";
+import Lottie from "lottie-react";
+import logoAnim from "../../assets/edenLogoAnim.json";
 
 export default function Login() {
   const { changeState } = useStateMachine();
@@ -125,6 +126,11 @@ export default function Login() {
     // Loading screen
     <div className={styles.loadingState}>
       <div className={styles.loadingLogo}>
+        <Lottie
+          animationData={logoAnim}
+          loop={true}
+          style={{ height: 200, width: 200 }}
+        />
         <div>ANIMATED EDEN LOGO</div>
         <progress value={loadingValue} />
       </div>

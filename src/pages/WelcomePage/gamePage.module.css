@@ -1,0 +1,18 @@
+.container {
+  padding: 10vh 30vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  height: 50vh;
+}
+
+.paragraph {
+  padding: 5vh 0;
+  font-size: 1.25rem;
+  text-align: justify;
+}

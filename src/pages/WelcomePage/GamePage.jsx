@@ -54,13 +54,14 @@ export default function GamePage() {
       </div>
       <div className={styles.paragraph}>
         <p>Click below to begin your work as an agent</p>
-        <a
-          href={`${import.meta.env.BASE_URL}app`}
-          // target="_blank"
-          rel="noopener noreferrer"
+
+        <button
+          onClick={() =>
+            window.open(`${import.meta.env.BASE_URL}app`, "_blank")
+          }
         >
-          <button> Play </button>
-        </a>
+          Play
+        </button>
       </div>
       {/*  <div className={styles.paragraph}>
         <p>a small carousel of images of the game</p>

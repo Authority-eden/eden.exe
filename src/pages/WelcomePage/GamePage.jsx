@@ -41,8 +41,15 @@ export default function GamePage() {
           like you’ve got mail. You pick it up and take it with you, you can
           check it out when you get to the office, after all you don’t want to
           be late for work. As you get your day started you repeat in your head
-          everything you will need to know: Your username is anonagtzero, your
-          password is /0penGate. Wouldn’t want to forget that.
+          everything you will need to know to access the platform:
+          <br />
+          <br />
+          USERNAME: anonagtzero
+          <br />
+          PASSWORD: /0penGate
+          <br />
+          <br />
+          Wouldn’t want to forget that...
         </p>
       </div>
       <div className={styles.paragraph}>
@@ -51,13 +58,30 @@ export default function GamePage() {
           <button> Play </button>
         </a>
       </div>
-      <div className={styles.paragraph}>
+      {/*  <div className={styles.paragraph}>
         <p>a small carousel of images of the game</p>
-      </div>
+      </div> */}
       <div className={styles.paragraph}>
-        <p>Short description of the work as a project</p>
-        <p>Credits</p>
-        <p>Double standard resources</p>
+        {/*  <p>Short description of the work as a project</p> */}
+        <h2>Credits</h2>
+        <ul>
+          <li>Bertagnin Bianca</li>
+          <li>Bissoli Miriam</li>
+          <li>Casini Francesca</li>
+          <li>Figueiredo Caeiro Alice</li>
+          <li>Garipova Dariia</li>
+          <li>De Jesus Pereira Beatriz Inês</li>
+        </ul>
+        <p>
+          Polytechnic University of Milan
+          <br />
+          School of Design
+          <br />
+          Complex Artifacts and System Design Studio
+          <br />
+          AY 2024 — 2025
+        </p>
+        {/*   <p>Double standard resources</p> */}
       </div>
     </div>
   );

@@ -54,7 +54,11 @@ export default function GamePage() {
       </div>
       <div className={styles.paragraph}>
         <p>Click below to begin your work as an agent</p>
-        <a href="/eden.exe/app" target="_blank" rel="noopener noreferrer">
+        <a
+          href={`${import.meta.env.BASE_URL}/app`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button> Play </button>
         </a>
       </div>

@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/eden.exe/" element={<GamePage />} />
+        <Route path={`${import.meta.env.BASE_URL}`} element={<GamePage />} />
         <Route path={`${import.meta.env.BASE_URL}app`} element={<App />} />
         <Route
           path={`${import.meta.env.BASE_URL}cut_throat`}

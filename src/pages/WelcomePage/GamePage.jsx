@@ -56,7 +56,7 @@ export default function GamePage() {
         <p>Click below to begin your work as an agent</p>
         <a
           href={`${import.meta.env.BASE_URL}app`}
-          target="_blank"
+          // target="_blank"
           rel="noopener noreferrer"
         >
           <button> Play </button>

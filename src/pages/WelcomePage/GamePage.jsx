@@ -55,7 +55,7 @@ export default function GamePage() {
       <div className={styles.paragraph}>
         <p>Click below to begin your work as an agent</p>
         <a
-          href={`${import.meta.env.BASE_URL}/app`}
+          href={`${import.meta.env.BASE_URL}app`}
           target="_blank"
           rel="noopener noreferrer"
         >

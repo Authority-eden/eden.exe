@@ -18,8 +18,8 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter basename="/eden.exe">
       <Routes>
-        <Route path="/" element={<GamePage />} />
-        <Route path="/app" element={<App />} />
+        <Route path="/" element={<App />} />
+        {/* <Route path="/app" element={<App />} /> */}
         <Route path="/cut_throat" element={<CutThroat />} />
         <Route path="/color_coded" element={<ColorCoded />} />
         <Route path="/half_half" element={<HalfHalf />} />

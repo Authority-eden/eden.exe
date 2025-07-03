@@ -16,7 +16,7 @@ Modal.setAppElement("#root");
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/eden.exe">
+    <BrowserRouter>
       <Routes>
         {/* <Route path="/app" element={<App />} /> */}
         <Route path="/" element={<App />} />

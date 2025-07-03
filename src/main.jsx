@@ -19,12 +19,12 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         {/* <Route path="/app" element={<App />} /> */}
-        <Route path="/" element={<App />} />
-        <Route path="/cut_throat" element={<CutThroat />} />
-        <Route path="/color_coded" element={<ColorCoded />} />
-        <Route path="/half_half" element={<HalfHalf />} />
-        <Route path="/agent_work" element={<AgentWork />} />
-        <Route path="/revolution" element={<Revolution />} />
+        <Route path=" " element={<App />} />
+        <Route path="cut_throat" element={<CutThroat />} />
+        <Route path="color_coded" element={<ColorCoded />} />
+        <Route path="half_half" element={<HalfHalf />} />
+        <Route path="agent_work" element={<AgentWork />} />
+        <Route path="revolution" element={<Revolution />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

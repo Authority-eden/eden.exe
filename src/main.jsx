@@ -16,38 +16,16 @@ Modal.setAppElement("#root");
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/eden.exe">
       <Routes>
-        <Route path="" element={<App />} />
         {/* <Route path="/app" element={<App />} /> */}
-        <Route
-          path={`${window.location.origin}${
-            import.meta.env.BASE_URL
-          }cut_throat`}
-          element={<CutThroat />}
-        />
-        <Route
-          path={`${window.location.origin}${
-            import.meta.env.BASE_URL
-          }color_coded`}
-          element={<ColorCoded />}
-        />
-        <Route
-          path={`${window.location.origin}${import.meta.env.BASE_URL}half_half`}
-          element={<HalfHalf />}
-        />
-        <Route
-          path={`${window.location.origin}${
-            import.meta.env.BASE_URL
-          }agent_work`}
-          element={<AgentWork />}
-        />
-        <Route
-          path={`${window.location.origin}${
-            import.meta.env.BASE_URL
-          }revolution`}
-          element={<Revolution />}
-        />
+        <Route path="/" element={<GamePage />} />
+        <Route path="/app" element={<App />} />
+        <Route path="/cut_throat" element={<CutThroat />} />
+        <Route path="/color_coded" element={<ColorCoded />} />
+        <Route path="/half_half" element={<HalfHalf />} />
+        <Route path="/agent_work" element={<AgentWork />} />
+        <Route path="/revolution" element={<Revolution />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

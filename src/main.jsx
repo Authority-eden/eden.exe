@@ -18,9 +18,8 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/app" element={<App />} /> */}
-
-        <Route path={`${import.meta.env.BASE_URL}`} element={<App />} />
+        <Route path={`${import.meta.env.BASE_URL}`} element={<GamePage />} />
+        <Route path={`${import.meta.env.BASE_URL}app`} element={<App />} />
         <Route
           path={`${import.meta.env.BASE_URL}cut_throat`}
           element={<CutThroat />}

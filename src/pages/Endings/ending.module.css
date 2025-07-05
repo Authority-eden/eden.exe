@@ -87,3 +87,18 @@
   box-shadow: 0 0 8px #fc9b3b;
   border: 1px solid #fc9b3b;
 }
+
+/* div to center video */
+.alarmContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.alarm {
+  position: absolute;
+}

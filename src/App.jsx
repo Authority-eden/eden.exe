@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { STATES, useStateMachine } from "./stateMachine";
 import AgentWork from "./pages/AgentWorkPage/AgentWork";
 import Login from "./pages/LoginPage/Login";
@@ -8,11 +9,35 @@ import Revolution from "./pages/Endings/SecretEnding";
 import Welcome from "./pages/WelcomePage/Welcome";
 import Instructions from "./pages/WelcomePage/Instructions";
 
+import soundtrack from "./assets/video/soundtrack.mp3";
+
 export default function App() {
   const { currentState } = useStateMachine();
   console.info("currentState", currentState);
+  const audioRef = useRef(null);
 
-  return <>{renderAppState(currentState)}</>;
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (currentState === STATES.SECRET_ENDING) {
+      audio.pause();
+    } else if (currentState === STATES.LOGIN) {
+      // Restart from beginning if desired
+      audio.currentTime = 0;
+      audio.play().catch((err) => console.warn("Playback blocked:", err));
+    }
+  }, [currentState]);
+
+  return (
+    <>
+      {/* Persistent Audio */}
+      <audio ref={audioRef} src={soundtrack} loop autoPlay hidden />
+
+      {/* Page Content */}
+      {renderAppState(currentState)}
+    </>
+  );
 }
 
 // Render each state of the application based on the current state

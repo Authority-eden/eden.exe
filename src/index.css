@@ -111,19 +111,20 @@ button:active {
 
 blockquote {
   position: relative;
+  color: white;
 }
 
 blockquote:before {
   position: absolute;
   content: open-quote;
-  font-size: 10vh;
+  font-size: 9vh;
   margin-left: -0.6em;
   margin-top: -0.4em;
 }
 blockquote:after {
   position: absolute;
   content: close-quote;
-  font-size: 10vh;
+  font-size: 9vh;
   bottom: 0;
   right: 0;
   margin-right: -0.6em;
@@ -131,7 +132,7 @@ blockquote:after {
 }
 blockquote p {
   display: inline;
-  font-size: 5vh;
+  font-size: 4vh;
 }
 
 hr {

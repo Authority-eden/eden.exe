@@ -20,6 +20,7 @@
     "react-modal": "^3.16.3",
     "react-player": "^3.1.0",
     "react-router": "^7.5.3",
+    "react-slideshow-image": "^4.3.2",
     "zustand": "^5.0.4"
   },
   "devDependencies": {

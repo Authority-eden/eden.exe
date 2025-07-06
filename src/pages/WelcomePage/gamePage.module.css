@@ -9,6 +9,7 @@
 
 .logo {
   height: 50vh;
+  padding-bottom: 2vh;
 }
 
 .highlight {
@@ -16,8 +17,7 @@
 }
 
 .paragraph {
-  margin-top: 4vh;
-  padding: 5vh 0;
+  /* padding: 5vh 0; */
   font-size: 1.25rem;
   text-align: justify;
   width: 40vw;
@@ -25,5 +25,27 @@
 
 .paragraph blockquote,
 .credentials {
-  text-align: center;
+  text-align: center !important;
+}
+
+.paragraph,
+.credentials {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+.credentials button {
+  font-size: 5vh;
+  padding: 2vh 3vw;
+  border: 3px solid #7493cc;
+}
+
+.credentials button:hover {
+  box-shadow: 0 0 8px #7493cc;
+  cursor: pointer;
+}
+.credentials button:active {
+  box-shadow: 0 0 8px white;
+  color: white;
+  border: 3px solid white;
 }

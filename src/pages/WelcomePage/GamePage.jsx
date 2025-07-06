@@ -1,5 +1,6 @@
 import styles from "./gamePage.module.css";
 import { IDENTITY_PATH } from "../../pathNames";
+import Slider from "./components/index.jsx";
 
 export default function GamePage() {
   return (
@@ -12,10 +13,16 @@ export default function GamePage() {
       <div className={styles.paragraph}>
         <blockquote>
           <p>
-            Cool sentence that might summarise the feel of the game/storyworld
+            I’m beginning to wonder if this system was designed to trap people
+            like me… people who ask questions…
           </p>
         </blockquote>
       </div>
+
+      <br />
+      <br />
+      <br />
+
       <div className={styles.paragraph}>
         <p className={styles.text}>
           The year 2046. You are an Agent of The Authority, the world order that{" "}
@@ -40,26 +47,23 @@ export default function GamePage() {
           be late for work. As you get your day started you repeat in your head
           everything you will need to know to access the platform:
         </p>
-        <br />
-        <br />
+
         <p className={styles.credentials}>
           USERNAME: <span className={styles.highlight}>anonagtzero</span>
           <br />
           PASSWORD: <span className={styles.highlight}>/0penGate</span>
-          <br />
-          <br />
-          <br />
         </p>
-        <p> Wouldn’t want to forget that...</p>
+        <p> Wouldn’t want to forget that…</p>
       </div>
 
       <hr />
 
-      <br />
       <div className={styles.credentials}>
         <h1>Begin your work as an agent</h1>
         <br />
+        <br />
 
+        <br />
         <button
           onClick={() =>
             window.open(`${import.meta.env.BASE_URL}app`, "_blank")
@@ -67,33 +71,61 @@ export default function GamePage() {
         >
           Play
         </button>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <hr />
+        <br />
       </div>
-      <div className={styles.paragraph}>
-        <p>a small carousel of images of the game</p>
-      </div>
-
-      <hr />
-      <br />
 
       <h1>The Project</h1>
 
       <div className={styles.paragraph}>
         <p>
-          EDEN.exe is a single-player investigative narrative game where truth
-          hides behind firewalls, riddles, and forgotten data trails. After
-          receiving a cryptic journal from a missing colleague, Amira Berger,
-          the player steps into the role of an agent in a world run by opaque
-          systems and manipulated information. On the surface, your job is to
-          process data, follow protocol, and comply. But if you pay attention
-          and are willing to investigate further you’ll find that, buried in the
-          noise, are fragments of a lost truth. Through ciphers, coded websites,
-          contradictory reports, and haunting pop-ups, the player uncovers the
-          real story of the past 20 years, a history rewritten by the
-          institutions that claimed to protect it. As the investigation deepens,
-          so does the question: are you here to serve the system… or expose it?
+          EDEN.exe is a{" "}
+          <span className={styles.highlight}>
+            single-player investigative narrative game
+          </span>{" "}
+          where truth hides behind firewalls, riddles, and forgotten data
+          trails.
+          <br />
+          <br />
+          After receiving a cryptic journal from a missing colleague, Amira
+          Berger, the player steps into the role of an agent in a world run by{" "}
+          <span className={styles.highlight}>
+            opaque systems and manipulated information.
+          </span>
+          <br />
+          <br />
+          On the surface, your job is to process data, follow protocol, and
+          comply. But if you pay attention and are willing to investigate
+          further you’ll find that, buried in the noise, are{" "}
+          <span className={styles.highlight}>fragments of a lost truth.</span>
+          <br />
+          <br />
+          Through ciphers, coded websites, contradictory reports, and haunting
+          pop-ups, the player uncovers the{" "}
+          <span className={styles.highlight}>
+            real story of the past 20 years,
+          </span>{" "}
+          a history rewritten by the institutions that claimed to protect it.
+          <br />
+          <br />
+          As the investigation deepens, so does the question:{" "}
+          <span className={styles.highlight}>
+            are you here to serve the system… or to expose it
+            <span style={{ fontFamily: "Chakra Petch" }}>?</span>
+          </span>{" "}
           Sometimes, to uncover the future, you must reassemble the past.
         </p>
+        <div className={styles.paragraph}>
+          <Slider></Slider>
+        </div>
+
         <br />
+
         <hr />
         <br />
 

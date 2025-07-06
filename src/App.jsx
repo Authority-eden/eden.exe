@@ -9,7 +9,7 @@ import Revolution from "./pages/Endings/SecretEnding";
 import Welcome from "./pages/WelcomePage/Welcome";
 import Instructions from "./pages/WelcomePage/Instructions";
 
-import soundtrack from "./assets/video/soundtrack.mp3";
+import soundtrack from "./assets/resources/soundtrack.mp3";
 
 export default function App() {
   const { currentState } = useStateMachine();

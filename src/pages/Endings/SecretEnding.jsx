@@ -2,7 +2,7 @@ import { STATES, useStateMachine } from "../../stateMachine";
 import { useState, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
 import styles from "./ending.module.css";
-import alarmVideo from "../../assets/video/error_message_with_audio.mp4";
+import alarmVideo from "../../assets/resources/error_message_with_audio.mp4";
 
 export default function Revolution() {
   const { changeState } = useStateMachine();

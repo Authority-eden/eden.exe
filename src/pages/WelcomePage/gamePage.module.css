@@ -17,7 +17,6 @@
 }
 
 .paragraph {
-  /* padding: 5vh 0; */
   font-size: 1.25rem;
   text-align: justify;
   width: 40vw;
@@ -29,7 +28,8 @@
 }
 
 .paragraph,
-.credentials {
+.credentials,
+.uniCredits {
   margin-top: 4vh;
   margin-bottom: 4vh;
 }
@@ -48,4 +48,19 @@
   box-shadow: 0 0 8px white;
   color: white;
   border: 3px solid white;
+}
+
+.uniCredits {
+  text-align: left;
+  width: 40vw;
+}
+
+.research {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 25vw;
+  align-content: space-between;
+  justify-content: space-between;
+  padding-top: 4vh;
 }

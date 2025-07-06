@@ -282,8 +282,9 @@ export default function GamePage() {
             </li>
           </ul>
         </div>
+        <br />
       </div>
-      <br />
+
       <hr />
 
       <div className={styles.uniCredits}>

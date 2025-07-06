@@ -42,10 +42,12 @@
   font-family: "M PLUS 1 Code", monospace;
 }
 
-.modalButton:hover {
+.modalButton:hover,
+.play button:hover {
   box-shadow: 0 0 8px #fcc23b;
 }
-.modalButton:active {
+.modalButton:active,
+.play button:active {
   color: #fc9b3b;
   box-shadow: 0 0 8px #fc9b3b;
   border: 1px solid #fc9b3b;
@@ -54,4 +56,12 @@
 .messageText {
   margin-top: 1vh;
   user-select: none;
+}
+
+.play button {
+  color: #fcc23b;
+  border: 1px solid #fcc23b;
+  background-color: black;
+  font-size: 1.5rem;
+  font-family: "M PLUS 1 Code", monospace;
 }

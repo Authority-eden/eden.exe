@@ -20,7 +20,11 @@ export default function App() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    if (currentState === STATES.SECRET_ENDING) {
+    if (
+      currentState === STATES.SECRET_ENDING ||
+      currentState === STATES.BAD_ENDING ||
+      currentState === STATES.NORMAL_ENDING
+    ) {
       audio.pause();
     } else if (currentState === STATES.LOGIN) {
       // Restart from beginning if desired

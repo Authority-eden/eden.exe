@@ -34,7 +34,6 @@
 }
 
 /* Glitched number to open riddle */
-/* TODO: improve animation and style */
 .numbers.special-number {
   font-weight: bold;
   animation: glitch-wiggle 1.5s infinite;

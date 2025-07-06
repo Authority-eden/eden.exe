@@ -2,10 +2,12 @@ import { useState } from "react";
 import styles from "./gamePage.module.css";
 import { IDENTITY_PATH } from "../../pathNames";
 import Slider from "./components/index.jsx";
+import PopUpModal from "../AgentWorkPage/components/PopUpModal/index.jsx";
 
 export default function GamePage() {
   const [isDSVisible, setIsDSVisible] = useState(false);
   const [isPvsSVisible, setIsPvsSVisible] = useState(false);
+  const [showJournalModal, setShowJournalModal] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -71,12 +73,18 @@ export default function GamePage() {
         <br />
 
         <button
-          onClick={() =>
-            window.open(`${import.meta.env.BASE_URL}app`, "_blank")
-          }
+          onClick={() => {
+            setShowJournalModal(true);
+          }}
         >
           Play
         </button>
+        <PopUpModal
+          isOpen={showJournalModal}
+          setIsOpen={setShowJournalModal}
+          typeOfMessage={"journalMessage"}
+          setSuppressSelectionBox={() => {}}
+        />
 
         <br />
         <br />

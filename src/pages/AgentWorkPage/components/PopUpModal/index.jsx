@@ -194,6 +194,35 @@ export default function PopUpModal({
           }
         ></PopUpMessage>
       );
+    } else if (typeOfMessage === "journalMessage") {
+      return (
+        <PopUpMessage
+          handleClick={() => {
+            setScale(0);
+            setTimeout(() => {
+              setIsOpen(false);
+            }, 200);
+          }}
+          text={
+            <>
+              <p>
+                EDEN.exe can only be fully experienced with Amira's Journal. Do
+                you wish to move forward nonetheless?
+              </p>
+              <br />
+              <div className={styles.play}>
+                <button
+                  onClick={() =>
+                    window.open(`${import.meta.env.BASE_URL}app`, "_blank")
+                  }
+                >
+                  Yes, I want to proceed
+                </button>
+              </div>
+            </>
+          }
+        ></PopUpMessage>
+      );
     } else if (typeOfMessage === "popUpRiddle") {
       return (
         <CaesarPopUp

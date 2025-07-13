@@ -6,26 +6,32 @@
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-## Context
+## Play the game
 
-The year 2046. You are an Agent of The Authority, the world order that keeps you, your family and all of your data safe. You do not know the exact details of how this came to be, you were too young to remember. But you know of it, the Collapse, the rise of The Authority, and the better world it created for everyone, more peaceful, safe, and free.
+<a href="https://authority-eden.github.io/eden.exe/">
+<img alt="EDEN.exe gameplay"  src="./src/assets/resources/carousel/7.jpg"></a>
+</br>
+</br>
+<div style="text-align:center">
+<a href="https://authority-eden.github.io/eden.exe/" style="font-size:1.5rem; color:#7493cc; border:1px #7493cc solid; padding:1vh 2vw; text-decoration:none">PLAY</a></div>
 
-You are relatively new to your job but you quickly made friends with another colleague of yours, Amira Berger. Someone who, now that you think of it… You have not seen in a while…
+## The Project
 
-In any case there is no time to lose, you have to get going. As you leave home, you find a package waiting for you at your doorstep, looks like you’ve got mail. You pick it up and take it with you, you can check it out when you get to the office, after all, you don’t want to be late for work.
+### Description
 
-As you get your day started you repeat in your head everything you will need to know to access the platform:
+EDEN.exe is a single-player investigative narrative game where truth hides behind firewalls, riddles, and forgotten data trails.
 
-<div style="font-family: monospace; text-align: center">
-USERNAME: anonagtzero
+After receiving a cryptic journal from a missing colleague, Amira Berger, the player steps into the role of an agent in a world run by opaque systems and manipulated information.
 
-PASSWORD: /0penGate
+On the surface, your job is to process data, follow protocol, and comply. But if you pay attention and are willing to investigate further you’ll find that, buried in the noise, are fragments of a lost truth.
 
-</div>
+Through ciphers, coded websites, contradictory reports, and haunting pop-ups, the player uncovers the real story of the past 20 years, a history rewritten by the institutions that claimed to protect it.
 
-Wouldn’t want to forget that...
+As the investigation deepens, so does the question: are you here to serve the system… or to expose it? Sometimes, to uncover the future, you must reassemble the past.
 
----
+### Requirements
+
+To experience the full game it is necessary to possess Amira Berger's Journal and Letter. You can download them in the game page of Eden.exe.
 
 ### Group members
 

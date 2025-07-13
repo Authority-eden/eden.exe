@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./gamePage.module.css";
-import { IDENTITY_PATH } from "../../pathNames";
+import { IDENTITY_PATH, RIDDLE_PATH } from "../../pathNames";
 import Slider from "./components/index.jsx";
 import PopUpModal from "../AgentWorkPage/components/PopUpModal/index.jsx";
 
@@ -50,8 +50,15 @@ export default function GamePage() {
           leave home, you find a package waiting for you at your doorstep, looks
           like you’ve got mail. You pick it up and take it with you, you can
           check it out when you get to the office, after all you don’t want to
-          be late for work. As you get your day started you repeat in your head
-          everything you will need to know to access the platform:
+          be late for work.
+          <br />
+          <div className={styles.credentials}>
+            <a href={`${RIDDLE_PATH}mail_package.zip`} download>
+              <button>Pick up your package</button>
+            </a>
+          </div>
+          As you get your day started you repeat in your head everything you
+          will need to know to access the platform:
         </p>
 
         <p className={styles.credentials}>
@@ -66,16 +73,14 @@ export default function GamePage() {
 
       <div className={styles.credentials}>
         <h1>Begin your work as an agent</h1>
-
         <br />
         <br />
         <br />
-        <br />
-
         <button
           onClick={() => {
             setShowJournalModal(true);
           }}
+          className={styles.play}
         >
           Play
         </button>
@@ -85,14 +90,10 @@ export default function GamePage() {
           typeOfMessage={"journalMessage"}
           setSuppressSelectionBox={() => {}}
         />
-
         <br />
         <br />
         <br />
         <br />
-        <br />
-        <br />
-
         <hr />
       </div>
 
@@ -308,6 +309,7 @@ export default function GamePage() {
           <br />
           AY 2024 — 2025
         </p>
+        <br />
         <br />
       </div>
     </div>

@@ -8,30 +8,24 @@
 
 ## Play the game
 
-<a href="https://authority-eden.github.io/eden.exe/">
+<a href="https://authority-eden.github.io/eden.exe/" target="blank">
 <img alt="EDEN.exe gameplay"  src="./src/assets/resources/carousel/7.jpg"></a>
-</br>
-</br>
-<div style="text-align:center">
-<a href="https://authority-eden.github.io/eden.exe/" style="font-size:1.5rem; color:#7493cc; border:1px #7493cc solid; padding:1vh 2vw; text-decoration:none">PLAY</a></div>
 
-## The Project
-
-### Description
+## Overview
 
 EDEN.exe is a single-player investigative narrative game where truth hides behind firewalls, riddles, and forgotten data trails.
 
-After receiving a cryptic journal from a missing colleague, Amira Berger, the player steps into the role of an agent in a world run by opaque systems and manipulated information.
+After receiving a cryptic journal from a missing colleague, Amira Berger, the player steps into the role of an agent in a world run by opaque systems and manipulated information. On the surface, your job is to process data, follow protocol, and comply. But if you pay attention and are willing to investigate further you’ll find that, buried in the noise, are fragments of a lost truth.
 
-On the surface, your job is to process data, follow protocol, and comply. But if you pay attention and are willing to investigate further you’ll find that, buried in the noise, are fragments of a lost truth.
+Through ciphers, coded websites, contradictory reports, and haunting pop-ups, the player uncovers the real story of the past 20 years, a history rewritten by the institutions that claimed to protect it. As the investigation deepens, so does the question: are you here to serve the system… or to expose it? Sometimes, to uncover the future, you must reassemble the past.
 
-Through ciphers, coded websites, contradictory reports, and haunting pop-ups, the player uncovers the real story of the past 20 years, a history rewritten by the institutions that claimed to protect it.
+## Requirements
 
-As the investigation deepens, so does the question: are you here to serve the system… or to expose it? Sometimes, to uncover the future, you must reassemble the past.
+To experience the full game it is necessary to possess Amira Berger's Journal and Letter. You can download them in the <a href="https://authority-eden.github.io/eden.exe/#:~:text=Pick%20up%20your%20package" target="blank">game page</a> of Eden.exe.
 
-### Requirements
+## Credits
 
-To experience the full game it is necessary to possess Amira Berger's Journal and Letter. You can download them in the game page of Eden.exe.
+This is a project made for the course Complex Artifacts and System Design Studio for the Master's Degree in Communication Design.
 
 ### Group members
 
@@ -46,6 +40,10 @@ _Polytechnic University of Milan </br>
 School of Design </br>
 Complex Artifacts and System Design Studio</br>
 AY 2024 — 2025_
+
+### Others
+
+Music: <a href="https://freemusicarchive.org/music/Daniel_Birch/Ambient_Vol1/Forgotten_Landscape/" target="blank">Forgotten Landscape by Daniel Birch</a>
 
 ### License
 

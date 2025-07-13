@@ -44,6 +44,7 @@ AY 2024 — 2025_
 ### Others
 
 Music: <a href="https://freemusicarchive.org/music/Daniel_Birch/Ambient_Vol1/Forgotten_Landscape/" target="blank">Forgotten Landscape by Daniel Birch</a>
+Font: <a href="https://velvetyne.fr/fonts/steps-mono/" target="blank">Steps Mono by Jean-Baptiste Morizot, Raphaël Bastide. Distributed by velvetyne.fr.</a>
 
 ### License
 

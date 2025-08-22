@@ -1,6 +1,6 @@
 <div align="center">
 
-<img height="200" alt="EDEN.exe" style="margin-bottom: 40px" src="./public/icons/edenBanner.svg">
+<img alt="EDEN.exe" style="margin-bottom: 40px" src="./public/icons/edenBanner.svg">
 
 </div>
 

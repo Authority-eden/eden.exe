@@ -11,6 +11,19 @@ export default function Revolution() {
   const videoRef = useRef(null);
   const containerRef = useRef(null);
 
+  const [showThanks, setShowThanks] = useState(false);
+
+  const changeStateWithDelay = (newState) => {
+    // Show the overlay message
+    setShowThanks(true);
+    console.log("delay");
+    // Delay before actually changing state
+    setTimeout(() => {
+      changeState(STATES.LOGIN);
+      setShowThanks(false);
+    }, 3500);
+  };
+
   useEffect(() => {
     const container = containerRef.current;
     container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
@@ -97,10 +110,27 @@ export default function Revolution() {
         </p>
         <br />
         <br />
-        <button onClick={() => changeState(STATES.LOGIN)}>
+        <button onClick={() => changeStateWithDelay(STATES.LOGIN)}>
           Reboot the system
         </button>
       </div>
+      {showThanks && (
+        <div
+          className={styles.finalWrapper}
+          style={{
+            height: "100%",
+            width: "100%",
+            zIndex: "3",
+            position: "fixed",
+            top: "0",
+            left: "0",
+          }}
+        >
+          <p className={styles.message}>
+            Thank you for playing EDEN.exe (prototype)
+          </p>
+        </div>
+      )}
     </div>
   ) : (
     <div className={styles.alarmContainer} ref={containerRef}>
